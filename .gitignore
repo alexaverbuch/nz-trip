@@ -1,0 +1,15 @@
+# Defensive deny-all allowlist (review findings 8 and 12).
+# Ignore everything by default, then re-include ONLY the publishable site files.
+# Dotfiles are matched by "*" too, so they must be re-included explicitly.
+*
+
+!.gitignore
+!.nojekyll
+!index.html
+!whangarei_map.html
+!whangarei_table.html
+!whangarei_daycare_table.html
+
+# whangarei_data.js is intentionally NOT included: the data is inlined into each
+# page, so the external file is optional (open question still pending). If kept,
+# add: !whangarei_data.js

@@ -1,0 +1,3257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>Whangarei daycares table (NZ trip)</title>
+<style>
+  :root{--bg:#f4f2ec;--panel:#fff;--ink:#23221f;--muted:#6c6a63;--faint:#9a988f;--line:#e3e0d7;--line2:#d2cfc4;
+    --green:#2e9e6b;--orange:#e08a1e;--red:#cf4b3e;--grey:#8a887f;--accent:#1f6feb;
+    --green-bg:#e6f4ec;--orange-bg:#fbeed6;--red-bg:#f8e3e0;--grey-bg:#eceae3;--rowhover:#f0eee6;}
+  @media (prefers-color-scheme:dark){:root{--bg:#1b1a18;--panel:#252320;--ink:#ece9e2;--muted:#a8a59c;--faint:#7d7a72;--line:#36332e;--line2:#45413a;--green:#4cc389;--orange:#e3a24a;--red:#e36b5e;--grey:#9a988f;--accent:#5b9bff;--green-bg:#173225;--orange-bg:#3a2c12;--red-bg:#3a1d19;--grey-bg:#2a2825;--rowhover:#2f2c28;}}
+  *{box-sizing:border-box;} html,body{margin:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+  header{padding:12px 18px;border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:30;}
+  .titlerow{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  h1{font-size:17px;font-weight:650;margin:0;} .sub{font-size:11.5px;color:var(--faint);margin-top:3px;}
+  .sub a{color:var(--accent);text-decoration:none;}
+  .filters{display:flex;flex-direction:column;gap:9px;align-items:flex-start;margin-top:10px;}
+  .f{display:flex;flex-direction:column;gap:3px;} .f .lbl{font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--faint);}
+  select,input{font:inherit;font-size:12px;padding:5px 7px;border-radius:8px;border:1px solid var(--line2);background:var(--panel);color:var(--ink);}
+  .subchips{display:flex;gap:5px;flex-wrap:wrap;max-width:620px;padding:6px 11px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);}
+  .schip{font-size:11px;padding:3px 8px;border-radius:999px;border:1px solid var(--line2);background:transparent;color:var(--muted);cursor:pointer;}
+  .schip.on{background:var(--ink);color:var(--bg);border-color:var(--ink);}
+  .ckgroup{display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding:6px 11px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);}
+  .ckgroup label{display:flex;align-items:center;gap:3px;font-size:11.5px;color:var(--muted);cursor:pointer;white-space:nowrap;}
+  .ckgroup input[type=checkbox]{width:auto;padding:0;margin:0;border:none;cursor:pointer;}
+  .btn{font:inherit;font-size:11px;padding:5px 10px;border-radius:8px;border:1px solid var(--line2);background:transparent;color:var(--muted);cursor:pointer;}
+  #toggleFilters{margin-top:8px;font-weight:600;color:var(--ink);}
+  #filterPanel{margin-top:8px;}
+  #filterPanel[hidden]{display:none;}
+  .legend{font-size:10.5px;color:var(--faint);margin-top:8px;line-height:1.7;}
+  .legend .lg{white-space:nowrap;} .legend .sep{color:var(--line2);margin:0 8px;}
+  main{padding:10px 18px 60px;}
+  .sec{margin:14px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);}
+  .sechd{display:flex;align-items:center;gap:10px;padding:9px 14px;cursor:pointer;background:var(--panel);border-bottom:1px solid var(--line);}
+  .sechd:hover{background:var(--bg);} .sechd .nm{font-size:14px;font-weight:650;} .sechd .ct{font-size:11.5px;color:var(--muted);}
+  .sechd .tw{margin-left:auto;font-size:11.5px;color:var(--faint);} .caret{transition:.15s;font-size:11px;color:var(--faint);}
+  .sec.collapsed .caret{transform:rotate(-90deg);} .sec.collapsed .tblwrap{display:none;}
+  .tblwrap{overflow-x:auto;}
+  table{border-collapse:collapse;width:100%;font-size:12px;} th,td{padding:6px 9px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top;}
+  th{position:sticky;top:0;background:var(--panel);font-size:10px;text-transform:uppercase;letter-spacing:.3px;color:var(--muted);cursor:pointer;user-select:none;z-index:1;}
+  th.sortable:hover{color:var(--ink);} th .ar{color:var(--accent);font-size:9px;}
+  tr:hover td{background:var(--rowhover);}
+  td.name{white-space:normal;min-width:160px;font-weight:600;}
+  td.wrap{white-space:normal;min-width:200px;max-width:300px;color:var(--muted);font-size:11px;}
+  td.wrapwide{white-space:normal;min-width:240px;max-width:360px;color:var(--muted);font-size:11px;}
+  td.wrap ul.phil-list,td.wrapwide ul.phil-list{margin:0;padding-left:14px;list-style:disc;} ul.phil-list li{margin:1px 0;padding:0;}
+  td.repcol{white-space:normal;min-width:200px;max-width:300px;font-size:11px;}
+  .rep2{font-weight:700;margin-bottom:3px;}
+  ul.rep-list{margin:0;padding-left:14px;list-style:disc;} ul.rep-list li{margin:1px 0;padding:0;}
+  li.rep-good{color:var(--green);} li.rep-bad{color:var(--red);}
+  a.link{color:var(--accent);text-decoration:none;} a.link:hover{text-decoration:underline;}
+  .pill{font-size:10px;font-weight:600;padding:1px 7px;border-radius:999px;}
+  .os-open{background:var(--green-bg);color:#1d6b46;} .os-closed{background:var(--red-bg);color:#8a2e25;} .os-ask{background:var(--orange-bg);color:#7a4d0c;} .os-na{background:var(--grey-bg);color:#55534c;}
+  .yes{color:var(--green);} .no{color:var(--red);} .ask{color:var(--grey);} b{font-weight:700;}
+  td.day{text-align:center;}
+  .sq{display:inline-block;width:13px;height:13px;border-radius:2px;vertical-align:middle;border:1.5px solid var(--green);box-sizing:border-box;}
+  .sq-green{background:var(--green);}
+  .sq-red{background:var(--red);border-color:var(--red);}
+  .sq-white{background:var(--panel);}
+  .sq-half{background:linear-gradient(to top right,var(--green) 0,var(--green) 50%,var(--panel) 50%,var(--panel) 100%);}
+  .row-nonviable td.name{opacity:.72;}
+  .flagmark{color:var(--orange);cursor:help;} .empty{padding:30px;text-align:center;color:var(--faint);}
+  @media print{header{position:static;} .filters,.btn,.map-col,th.map-col{display:none;} .sec.collapsed .tblwrap{display:block;} .sec{break-inside:avoid;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="titlerow">
+    <div><h1>Whangarei daycares (ECE)</h1>
+      <div class="sub" id="sub"></div></div>
+    <div class="sub">Map: <a href="whangarei_map.html" target="_blank">whangarei_map.html</a> &middot; Homes table: <a href="whangarei_table.html" target="_blank">whangarei_table.html</a></div>
+  </div>
+  <button class="btn" id="toggleFilters" aria-expanded="false" title="Show or hide the filter controls">Show filters &#9656;</button>
+  <div id="filterPanel" hidden>
+  <div class="filters" id="filters">
+    <div class="f"><span class="lbl">Service type</span>
+      <div class="ckgroup" id="fType" title="Tick the service types to show. All ticked = every type."></div></div>
+    <div class="f"><span class="lbl">Open through summer</span>
+      <div class="ckgroup" id="fOS" title="Tick the summer-status values to show. All ticked = any."></div></div>
+    <div class="f"><span class="lbl">Takes 2yo (Veli)</span>
+      <div class="ckgroup" id="f2" title="Tick the 2yo-policy values to show. All ticked = any."></div></div>
+    <div class="f"><span class="lbl">4+YO peers (min)</span>
+      <div style="display:flex;align-items:center;gap:6px">
+        <input id="f4min" type="number" min="0" step="1" placeholder="any" style="width:56px"
+          title="Show only centres with at least this many 4 to 5-year-olds. Leave blank to show every centre.">
+        <label id="f4unkLbl" style="font-size:11px;color:var(--faint);opacity:.55;display:flex;align-items:center;gap:3px;white-space:nowrap;cursor:not-allowed"
+          title="Only applies once you set a minimum. When ticked, centres we have no count for yet are kept in the list instead of being filtered out.">
+          <input id="f4unk" type="checkbox" disabled style="width:auto;padding:0;border:none"> keep no-count</label>
+      </div></div>
+    <div class="f"><span class="lbl">Contacted</span>
+      <select id="fContacted"><option value="all">Any</option><option value="yes">Contacted</option><option value="no">Not yet</option></select></div>
+    <div class="f"><span class="lbl">Replied</span>
+      <select id="fReplied"><option value="all">Any</option><option value="yes">Replied</option><option value="no">Not yet</option></select></div>
+    <div class="f"><span class="lbl">Available</span>
+      <div class="ckgroup" id="fAvail" title="Tick the availability values to show. All ticked = any."></div></div>
+    <div class="f"><span class="lbl">Suburbs</span>
+      <div class="subchips" id="subChips"></div></div>
+    <div class="f"><span class="lbl">&nbsp;</span><button class="btn" id="allSub">All</button></div>
+    <div class="f"><span class="lbl">&nbsp;</span><button class="btn" onclick="window.print()">Print / PDF</button></div>
+  </div>
+  <div class="legend" id="legend">
+    <span class="lg"><b>Summer:</b> <span class="pill os-open">Open</span> <span class="pill os-closed">Closed part</span> <span class="pill os-ask">Confirm</span> <span class="pill os-na">n/a</span></span><span class="sep">|</span>
+    <span class="lg"><b>Age policy, Contacted &amp; Replied:</b> <span class="yes"><b>&#10003;</b></span> yes <span class="no"><b>&#10007;</b></span> no <span class="ask"><b>?</b></span> confirm <span class="ask">&mdash;</span> not yet</span><span class="sep">|</span>
+    <span class="lg"><b>4+YO:</b> count of 4 to 5-year-olds (blank = not yet known)</span><span class="sep">|</span>
+    <span class="lg"><b>&lt;2YO:</b> takes under-2s (inferred)</span><span class="sep">|</span>
+    <span class="lg"><b>Mon&ndash;Fri:</b> <span class="sq sq-green"></span> available <span class="sq sq-red"></span> not <span class="sq sq-half"></span> implied <span class="sq sq-white"></span> no info</span>
+    <div style="margin-top:5px">Day availability is derived from each reply, confirm by phone. Click a column header to sort. Each row links to the map.</div>
+  </div>
+  </div>
+</header>
+<main id="main"></main>
+<script>
+//WHGREI_DATA_START
+window.WHGREI = {
+ "meta": {
+  "generated": "2026-06-25",
+  "sources": {
+   "furnished": "furnished_listings_2026-06-18.xlsx",
+   "daycares": "Whangarei_ECE_Centres_Comparison.xlsx",
+   "daycare_oracle": "whangarei_daycare_map_data.xlsx"
+  },
+  "counts": {
+   "homes": 9,
+   "furnished": 9,
+   "unfurnished": 0,
+   "homes_viable": 4,
+   "homes_undecided": 0,
+   "homes_unsuitable": 5,
+   "daycares": 53,
+   "daycares_viable": 51,
+   "daycares_open_summer": 31
+  },
+  "map": {
+   "center": [
+    -35.7255,
+    174.3233
+   ],
+   "zoom": 13
+  },
+  "notes": "Homes (furnished only) and daycares are two independent catalogues; there is no home-to-daycare pairing. Daycare 'viable' means the centre's age policy accepts both children (Saima, 5, kept in ECE; Veli, 2 from 14 Sep 2026); it is a label only. Live daycare vacancy is unpublished, so confirm by phone."
+ },
+ "homes": [
+  {
+   "id": "12-cameron-street-whangarei-central",
+   "address": "12 Cameron Street",
+   "suburb": "Whangarei Central",
+   "price": 565,
+   "beds": 2,
+   "baths": 1,
+   "furnished": true,
+   "furnish_note": "",
+   "maxten": "Not stated, ask",
+   "maxten_flag": false,
+   "avail": "Available now",
+   "term": "Not stated, ask",
+   "covers": "likely",
+   "parking": "ask",
+   "laundry": "yes",
+   "outdoor": "ask",
+   "heating": "yes",
+   "broadband": "ask",
+   "pets": "Not stated, ask",
+   "bond": "Not stated, ask",
+   "contact": "Jordan Hooper, 027 432 8212, Barfoot & Thompson Whangarei",
+   "phone": "027 432 8212",
+   "email": "",
+   "url": "https://oneroof.co.nz/property/northland/whangarei-central/12-cameron-street/U0uyn",
+   "url_kind": "listing",
+   "source": "OneRoof | oneroof.co.nz/property/northland/whangarei-central/12-cameron-street/U0uyn",
+   "listed": "04/09/2020 (updated recently)",
+   "lat": -35.732223,
+   "lng": 174.315037,
+   "drivecbd": "~2 min (1.1 km) (approx: suburb centroid)",
+   "suit": "unsuitable",
+   "s45": "marked unsuitable 2026-06-22 (manual review)",
+   "approx": true,
+   "notes": "Fully furnished CBD unit, walk to Town Basin. Only 2 brm for family of four. Floor area record 366 sqm is whole building, unit smaller. Marked UNSUITABLE on 2026-06-22 (manual review)."
+  },
+  {
+   "id": "132-western-hills-drive-kensington",
+   "address": "132 Western Hills Drive",
+   "suburb": "Kensington",
+   "price": 580,
+   "beds": 2,
+   "baths": 1,
+   "furnished": true,
+   "furnish_note": "",
+   "maxten": "Not stated, ask",
+   "maxten_flag": false,
+   "avail": "29/06/2026 or sooner",
+   "term": "Not stated, ask",
+   "covers": "likely",
+   "parking": "ask",
+   "laundry": "ask",
+   "outdoor": "ask",
+   "heating": "ask",
+   "broadband": "ask",
+   "pets": "Not stated, ask",
+   "bond": "Not stated, ask",
+   "contact": "Corinne Kornetzky, 027 482 6330, Ray White Whangarei (Goode Leith)",
+   "phone": "027 482 6330",
+   "email": "",
+   "url": "https://oneroof.co.nz/property/northland/kensington/132-western-hills-drive/YwnVZ",
+   "url_kind": "listing",
+   "source": "OneRoof | oneroof.co.nz/property/northland/kensington/132-western-hills-drive/YwnVZ",
+   "listed": "08/05/2023 (updated 10 days ago)",
+   "lat": -35.708602,
+   "lng": 174.31213,
+   "drivecbd": "~4 min (2.1 km)",
+   "suit": "viable",
+   "s45": "",
+   "approx": false,
+   "notes": "Fully furnished + lawns included. FLAG: backs onto stream, listing says may not suit small children. Cross-lease, 82 sqm. Confirm urban Kensington."
+  },
+  {
+   "id": "30-highfield-way-maunu",
+   "address": "30 Highfield Way",
+   "suburb": "Maunu",
+   "price": 749,
+   "beds": 4,
+   "baths": 3,
+   "furnished": true,
+   "furnish_note": "",
+   "maxten": "Not stated, ask",
+   "maxten_flag": false,
+   "avail": "17/07/2026",
+   "term": "Not stated, ask",
+   "covers": "likely",
+   "parking": "yes",
+   "laundry": "ask",
+   "outdoor": "yes",
+   "heating": "ask",
+   "broadband": "ask",
+   "pets": "Not stated, ask",
+   "bond": "Not stated, ask",
+   "contact": "Jordan Hooper / Clint Kennedy, 027 432 8212, Barfoot & Thompson Whangarei",
+   "phone": "027 432 8212",
+   "email": "",
+   "url": "https://oneroof.co.nz/property/northland/maunu/30-highfield-way/6PhOp",
+   "url_kind": "listing",
+   "source": "OneRoof | oneroof.co.nz/property/northland/maunu/30-highfield-way/6PhOp ; also Trade Me",
+   "listed": "12/10/2023 (updated recently)",
+   "lat": -35.739407,
+   "lng": 174.277494,
+   "drivecbd": "~9 min (4.4 km)",
+   "suit": "unsuitable",
+   "s45": "marked unsuitable 2026-06-22 (manual review)",
+   "approx": false,
+   "notes": "Split-level, 3 living areas, 4 brm 3 bath, 250 sqm, 728 sqm section (standard subdivision). Partly furnished, confirm inventory. Maunu fringe; check commute. Marked UNSUITABLE on 2026-06-22 (manual review)."
+  },
+  {
+   "id": "austin-road-fully-furnished-maunu",
+   "address": "Austin Road (Fully Furnished)",
+   "suburb": "Maunu",
+   "price": 1000,
+   "beds": 4,
+   "baths": 3,
+   "furnished": true,
+   "furnish_note": "",
+   "maxten": "Not stated, ask",
+   "maxten_flag": false,
+   "avail": "25/07/2026",
+   "term": "Not stated, ask",
+   "covers": "likely",
+   "parking": "yes",
+   "laundry": "ask",
+   "outdoor": "ask",
+   "heating": "ask",
+   "broadband": "ask",
+   "pets": "Not stated, ask",
+   "bond": "Not stated, ask",
+   "contact": "Private listing via Trade Me (message through listing)",
+   "phone": "",
+   "email": "",
+   "url": "https://www.trademe.co.nz/a/property/residential/rent/northland/whangarei?search_string=Austin+Road",
+   "url_kind": "search",
+   "source": "Trade Me | trademe.co.nz Whangarei rent search (title 'Fully Furnished - Austin Rd, Maunu')",
+   "listed": "15/06/2026",
+   "lat": -35.744121,
+   "lng": 174.272179,
+   "drivecbd": "~10 min (5.1 km)",
+   "suit": "viable",
+   "s45": "",
+   "approx": false,
+   "notes": "Fully furnished 4 brm at the 1000/wk cap. Avail 25 Jul fits an Aug start. Private listing; confirm furnished inventory, term, max tenants on the detail page."
+  },
+  {
+   "id": "the-avenues-apartments-cnr-central-ave-second-av",
+   "address": "The Avenues Apartments (cnr Central Ave & Second Ave)",
+   "suburb": "The Avenues",
+   "price": null,
+   "beds": 2,
+   "baths": 1,
+   "furnished": true,
+   "furnish_note": "",
+   "maxten": "Family (2 brm, queen + 2 singles)",
+   "maxten_flag": true,
+   "avail": "No current vacancy; join waitlist",
+   "term": "Preferred 12 months; shorter terms by enquiry",
+   "covers": "yes",
+   "parking": "yes",
+   "laundry": "yes",
+   "outdoor": "yes",
+   "heating": "yes",
+   "broadband": "yes",
+   "pets": "Not stated, ask",
+   "bond": "Not stated, ask",
+   "contact": "Central Whangarei Apartment Accommodation, enquiry form whangareiaccommodation.net.nz/contact-us (email shown on site)",
+   "phone": "",
+   "email": "",
+   "url": "https://whangareiaccommodation.net.nz/furnished-apartments-avenues",
+   "url_kind": "listing",
+   "source": "Central Whangarei Apartment Accommodation | whangareiaccommodation.net.nz/furnished-apartments-avenues",
+   "listed": "Standing listing",
+   "lat": -35.727862,
+   "lng": 174.312818,
+   "drivecbd": "~2 min (1.0 km)",
+   "suit": "unsuitable",
+   "s45": "marked unsuitable 2026-06-22 (manual review)",
+   "approx": false,
+   "notes": "Best turnkey furnished fit in-border. 5 min walk to CBD, near hospital. No letting fee via site. Price not published, confirm vs 1000 cap. ENQUIRY DRAFTED. Marked UNSUITABLE on 2026-06-22 (manual review)."
+  },
+  {
+   "id": "eleven-11-donald-street-regent",
+   "address": "Eleven, 11 Donald Street",
+   "suburb": "Regent",
+   "price": null,
+   "beds": 2,
+   "baths": 1,
+   "furnished": true,
+   "furnish_note": "",
+   "maxten": "Not stated, ask",
+   "maxten_flag": false,
+   "avail": "Fully tenanted now; join waitlist",
+   "term": "Preferred 12 months; shorter terms by enquiry",
+   "covers": "yes",
+   "parking": "yes",
+   "laundry": "yes",
+   "outdoor": "ask",
+   "heating": "yes",
+   "broadband": "ask",
+   "pets": "Not stated, ask",
+   "bond": "Not stated, ask",
+   "contact": "Central Whangarei Apartment Accommodation, enquiry form whangareiaccommodation.net.nz/contact-us",
+   "phone": "",
+   "email": "",
+   "url": "https://whangareiaccommodation.net.nz/furnished-apartments-regent",
+   "url_kind": "listing",
+   "source": "Central Whangarei Apartment Accommodation | whangareiaccommodation.net.nz/furnished-apartments-regent",
+   "listed": "Standing listing",
+   "lat": -35.715668,
+   "lng": 174.324699,
+   "drivecbd": "~2 min (1.1 km)",
+   "suit": "unsuitable",
+   "s45": "marked unsuitable 2026-06-22 (manual review)",
+   "approx": false,
+   "notes": "Regent location, short walk to New World, 15 min to CBD. Currently full. Price on enquiry. ENQUIRY DRAFTED. Marked UNSUITABLE on 2026-06-22 (manual review)."
+  },
+  {
+   "id": "quest-whangarei-serviced-apartments-58-bank-stre",
+   "address": "Quest Whangarei (serviced apartments), 58 Bank Street",
+   "suburb": "Whangarei Central",
+   "price": null,
+   "beds": null,
+   "baths": 1,
+   "furnished": true,
+   "furnish_note": "",
+   "maxten": "Not stated, ask",
+   "maxten_flag": false,
+   "avail": "Enquire",
+   "term": "Long Stay monthly rate on direct enquiry",
+   "covers": "likely",
+   "parking": "ask",
+   "laundry": "yes",
+   "outdoor": "ask",
+   "heating": "yes",
+   "broadband": "yes",
+   "pets": "Not stated, ask",
+   "bond": "Not stated, ask",
+   "contact": "Quest Whangarei, 58 Bank St, phone/email via questapartments.co.nz",
+   "phone": "",
+   "email": "",
+   "url": "https://www.questapartments.co.nz/properties/north-island/whangarei/quest-whangarei",
+   "url_kind": "listing",
+   "source": "Quest | www.questapartments.co.nz/properties/north-island/whangarei/quest-whangarei",
+   "listed": "Standing",
+   "lat": -35.724508,
+   "lng": 174.319776,
+   "drivecbd": "~1 min (0.3 km)",
+   "suit": "unsuitable",
+   "s45": "marked unsuitable 2026-06-22 (manual review)",
+   "approx": false,
+   "notes": "Serviced aparthotel, CBD. Rack rate over cap; ask for discounted Long Stay monthly. Good landing/bridge option for arrival. ENQUIRY DRAFTED. Marked UNSUITABLE on 2026-06-22 (manual review)."
+  },
+  {
+   "id": "dent-street-dinsdale-private-whangarei-central",
+   "address": "Dent Street (Dinsdale, private)",
+   "suburb": "Whangarei Central",
+   "price": 795,
+   "beds": 3,
+   "baths": 2,
+   "furnished": true,
+   "furnish_note": "",
+   "maxten": "Not stated, ask",
+   "maxten_flag": false,
+   "avail": "End July 2026",
+   "term": "Not stated, ask",
+   "covers": "likely",
+   "parking": "yes",
+   "laundry": "ask",
+   "outdoor": "ask",
+   "heating": "ask",
+   "broadband": "ask",
+   "pets": "Not stated, ask",
+   "bond": "Not stated, ask",
+   "contact": "Pauline Dinsdale, pauline@paulinedinsdale.co.nz",
+   "phone": "",
+   "email": "pauline@paulinedinsdale.co.nz",
+   "url": "",
+   "url_kind": "",
+   "source": "Direct inbound offer by email, 21 Jun 2026 (Pauline Dinsdale)",
+   "listed": "21/06/2026 (inbound offer)",
+   "lat": -35.7264,
+   "lng": 174.3249,
+   "drivecbd": "~1 min (approx; Dent St, Town Basin/central)",
+   "suit": "viable",
+   "s45": "",
+   "approx": true,
+   "notes": "Private inbound offer (Pauline Dinsdale). Furnished 3-bed 2-bath, 2 levels, Dent St central city near Town Basin. $795/wk plus water; available end July 2026; 8 photos supplied. Confirm term, furnishings inventory, Healthy Homes heating/insulation, laundry, broadband, max tenants, bond. Reply drafted: rental_enquiries/Dent_St_Central_Furnished/."
+  },
+  {
+   "id": "woodhill-furnished-home-findlay-woodhill",
+   "address": "Woodhill furnished home (Findlay)",
+   "suburb": "Woodhill",
+   "price": 750,
+   "beds": 3,
+   "baths": null,
+   "furnished": true,
+   "furnish_note": "",
+   "maxten": "Not stated, ask",
+   "maxten_flag": false,
+   "avail": "Flexible (owner away mainly in warmer months; usually Airbnb)",
+   "term": "9-month full-period term offered (22 Jun 2026); earlier flexible (3-month let last summer)",
+   "covers": "yes",
+   "parking": "ask",
+   "laundry": "ask",
+   "outdoor": "ask",
+   "heating": "ask",
+   "broadband": "yes",
+   "pets": "Not stated, ask",
+   "bond": "Not stated, ask",
+   "contact": "Christine Findlay, christinefindlay253@gmail.com",
+   "phone": "",
+   "email": "christinefindlay253@gmail.com",
+   "url": "",
+   "url_kind": "",
+   "source": "Direct inbound offer by email, 21 Jun 2026 (Christine Findlay; usually on Airbnb)",
+   "listed": "21/06/2026 (inbound offer)",
+   "lat": -35.732989,
+   "lng": 174.300616,
+   "drivecbd": "~3 min (approx; Woodhill, near Fourth Ave)",
+   "suit": "viable",
+   "s45": "",
+   "approx": true,
+   "notes": "Private inbound offer (Christine Findlay). Fully furnished 3-bed, Woodhill, central, near a daycare on Fourth Ave and the hospital. $750/wk incl wifi/gas/electricity/water. Usually Airbnb (her listing link in rental_enquiries/Woodhill_Furnished_Findlay/Email_3.md), will declutter for a longer let. UPDATE 22 Jun 2026: owner replied, happy to do a 9-month term covering the full Aug 2026 to late Apr 2027 period, sending photos, and fine for Alex's parents to view. She asked where Alex works and our exact arrival/departure dates: Alex to reply himself (no draft, per instruction). Still confirm furnishings detail, parking, bond. First reply sent 22 Jun 2026 (rental_enquiries/Woodhill_Furnished_Findlay/)."
+  }
+ ],
+ "daycares": [
+  {
+   "id": "BestStartKensington",
+   "n": "BestStart Kensington Crossing",
+   "suburb": "Kensington",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published per branch (chain closes stat days + often short Christmas block)",
+   "avail": "Yes - both Wed/Thu/Fri, start 14 Sep 2026 (forms to reserve) (reply 22 Jun)",
+   "ages": "0-5",
+   "a2": "Yes (infant/toddler rooms, 15 under-2)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "up to 20",
+   "phil": "'Set for School' (BestStart school-readiness programme) plus '16 Areas of Play'; otherwise standard Te Whariki play-based; Storypark",
+   "hours": "Mon-Fri 7:00am-5:30pm (longest hours)",
+   "feesu3": "Unpublished (varies by centre; pay in advance; 2% card surcharge)",
+   "fees3": "Unpublished; 20 Hours 3-5",
+   "h20": "Yes for 3-5; not for 2yo",
+   "ero": "Institution report exists; rating/date NF (group governance review Feb 2024 positive)",
+   "google": "4.4 (69) [in Kensington Crossing retail complex; some reviews may relate to complex]",
+   "ph": "09 459 1442",
+   "em": "kensingtoncrossing@best-start.org",
+   "web": "https://best-start.org/centres/beststart-kensington-crossing",
+   "addr": "8 Kensington Avenue, Whangarei 0112",
+   "lat": -35.70821081,
+   "lng": 174.32038693,
+   "adv": "Longest hours (7-5:30); meals provided; both children one centre; large purpose-built; likely open most of summer",
+   "concern": "Larger/corporate feel; exact summer dates + fees need confirming; can be at capacity",
+   "action": "Complete & return Pre-Enrolment Form to reserve Wed/Thu/Fri; ask fees + exact Christmas dates; arrange Aug visit.",
+   "inreg": "Yes",
+   "cap": "75 (up to 15 under-2)",
+   "ratios": "Qualified team + cook; chain-standard ratios",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Expansive purpose-built playground",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "By far the most-reviewed centre in town and 80%+ of families recommend it, but a larger/corporate feel and a shared retail-complex location pull the score below the small boutique centres.",
+   "rep_good": [
+    "Strong special-needs support: 'helping my little man who has autism to feel safe and progress'",
+    "Centre cook / healthy meals; longest hours (7am-5:30pm)",
+    "80%+ families recommend (MyECE/OECE); BestStart brand awards"
+   ],
+   "rep_bad": [
+    "Larger / corporate feel",
+    "Shared Kensington Crossing retail-complex location can muddy the review signal",
+    "4.4 sits below the small boutique centres"
+   ]
+  },
+  {
+   "id": "Giggles",
+   "n": "Giggles Learning Centre",
+   "suburb": "Kensington",
+   "type": "Education & care",
+   "os": "closed",
+   "sdates": "Closed up to 3 weeks over Christmas + up to 1 week at Matariki (no fees during closures)",
+   "avail": "DECLINED (Rachel Terry, 21 Jun 2026): waiting list out to Feb 2027. Suggested Inspired Minds + Valleys Little Treasures.",
+   "ages": "3 months - 5 years",
+   "a2": "Yes (Te Wahi Teina under-2; 2-3yo Tuakana)",
+   "a5": "Yes (Kaiarahi 3-6)",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "No formal named pedagogy; bicultural / Te Tiriti-based identity; kaitiaki / sustainability focus; regular ngahere (bush) excursions; te reo daily",
+   "hours": "Mon-Fri 8:00am-4:00pm (shorter day)",
+   "feesu3": "Unpublished",
+   "fees3": "Unpublished; 20 Hours 3+",
+   "h20": "Yes for 3+; not for 2yo",
+   "ero": "Well placed: rich culturally responsive curriculum, te ao Maori, strong community trust (date NF)",
+   "google": "none (listing, no reviews)",
+   "ph": "021 207 3469",
+   "em": "giggleslearningcentre@xtra.co.nz",
+   "web": "https://giggleslearningcentre.co.nz",
+   "addr": "8 Cairnfield Road, Kensington, Whangarei 0112",
+   "lat": -35.70267783,
+   "lng": 174.32529482,
+   "adv": "Both children one centre; outstanding Maori/bicultural curriculum; registered-teacher owner; small groups",
+   "concern": "OPEN THROUGH SUMMER = NO (up to 3-week Christmas closure hits the Dec-Jan window); 4pm close early for working parents",
+   "action": "Declined (waitlist to Feb 2027); off the list for our window. Pursue the two suggested leads (Inspired Minds, Valleys Little Treasures).",
+   "inreg": "Yes",
+   "cap": "33 (up to ~20 under-2)",
+   "ratios": "Registered-teacher owner + ~6-7 registered + 2 trainees; small groups",
+   "langs": "English + Te Reo Maori (daily, embedded)",
+   "outdoor": "Outdoor play (detail NF)",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Quietly respected",
+   "rep_overall": "No public Google reviews, but a strong ERO, a registered-teacher owner and a rich bicultural curriculum earn clear community trust (80%+ recommend).",
+   "rep_good": [
+    "80%+ families recommend (MyECE/OECE)",
+    "Registered-teacher owner active in teaching + governance (ERO)",
+    "Rich te ao Maori / culturally responsive curriculum",
+    "Well established in the community"
+   ],
+   "rep_bad": [
+    "No public Google reviews to draw on"
+   ]
+  },
+  {
+   "id": "KensingtonEducare",
+   "n": "Kensington Educare",
+   "suburb": "Kensington",
+   "type": "Education & care",
+   "os": "ask",
+   "sdates": "Not published (confirm)",
+   "avail": "Has space (both), but we PASSED 24 Jun: too few peers Saima's age (~7 4yos, no 5yos)",
+   "ages": "2-5",
+   "a2": "2yo Yes (mixed-age, no separate under-2); under-2 No",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); Educare group (Kensington Park); mixed-age",
+   "hours": "Full day; ~7:30am-5:30pm (verify)",
+   "feesu3": "Unpublished",
+   "fees3": "Unpublished; 20 Hours 3+",
+   "h20": "Yes for 3+; not for 2yo",
+   "ero": "Strengths in health/safety + performance mgmt; most retrievable report ~May 2018 (older)",
+   "google": "5.0 (5)",
+   "ph": "09 437 6082",
+   "em": "kensington@educare.co.nz",
+   "web": "https://educare.co.nz",
+   "addr": "Western Hills Drive, Kensington, Whangarei 0112",
+   "lat": -35.70874757,
+   "lng": 174.31328716,
+   "adv": "Small, well-reviewed, central; good for 5yo and 2yo+ mixed group",
+   "concern": "No under-2 room (Veli only from 2nd birthday); older ERO; summer closure unconfirmed; can be full",
+   "action": "Closed - we declined 24 Jun (too few peers Saima's age). No further action.",
+   "inreg": "Yes",
+   "cap": "31 (0 under-2)",
+   "ratios": "Boutique (<=50); MyECE flags not 100% qualified-funded; clean licence",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Within ASB Leisure Centre complex; own outdoor area",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "Small mixed-age centre with happy children and lovely teachers; 80%+ of families recommend it.",
+   "rep_good": [
+    "'really lovely teachers and the perfect environment'",
+    "'My baby is always happy to go here'",
+    "Clean, modern facilities",
+    "80%+ families recommend"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "StJohns",
+   "n": "St John's Progressive Childcare",
+   "suburb": "Kensington",
+   "type": "Education & care",
+   "os": "ask",
+   "sdates": "Open bar statutory days over Christmas (per centre 22 Jun)",
+   "avail": "Yes - both, same days, from Sep 2026 (reply 22 Jun)",
+   "ages": "3 months - school age (0-5)",
+   "a2": "Yes (Infants & Toddlers building, 3 sub-groups)",
+   "a5": "Yes (Over Twos building)",
+   "contacted": "Yes",
+   "count4": "26",
+   "phil": "No distinctive named pedagogy ('Progressive' is the centre's name, not an approach); community-based, parent-governed non-profit; kaupapa Maori values",
+   "hours": "Full day Mon-Fri (exact times NF)",
+   "feesu3": "Unpublished (non-profit)",
+   "fees3": "Unpublished; 20 Hours 3+; Friday lunchbox over-2s",
+   "h20": "Yes for 3+; not for 2yo",
+   "ero": "Well placed: curriculum consistent with Te Whariki, language-rich (date NF)",
+   "google": "4.8 (5)",
+   "ph": "09 437 2746",
+   "em": "info@stjohnscc.org.nz",
+   "web": "https://stjohnscc.org.nz",
+   "addr": "149 Kamo Road, Kensington, Whangarei 0112",
+   "lat": -35.70541967,
+   "lng": 174.31888467,
+   "adv": "Both children one centre (0-5); non-profit (fees reinvested); meals provided; Well placed ERO; established/large",
+   "concern": "Summer closure dates unconfirmed; can be full; fees not online",
+   "action": "Answer their Q (daycare experience + English). Ask fees (3 & 4-day) and Veli's earliest start; arrange video call. Summer: open bar stat days (confirmed).",
+   "inreg": "Yes",
+   "cap": "70 (up to 20 under-2)",
+   "ratios": "Manager + 8 qualified + 8 unqualified + cook + admin; parent board of trustees",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Two large outdoor environments",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "Established community-based centre (volunteer board) with caring, goal-focused teachers and a manaakitanga/aroha ethos; 80%+ recommend.",
+   "rep_good": [
+    "'teachers are amazing and go out of [their] way to make the children comfortable'",
+    "'settled very well ... caring, loving ... help my little one achieve his goals'",
+    "Community-based, volunteer-governed",
+    "80%+ families recommend"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "BestStartMaunu",
+   "n": "BestStart Maunu Village",
+   "suburb": "Maunu",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published; BestStart long-day centres operate year-round (close stat days + short Christmas)",
+   "avail": "Yes - both from Sep (Saima Rakau, Veli Whanake at 2; joint play area) (reply 22 Jun)",
+   "ages": "3 months - 5",
+   "a2": "Yes (infant + toddler; ~20 under-2)",
+   "a5": "Yes (preschool room)",
+   "contacted": "Yes",
+   "count4": "30",
+   "phil": "'Set for School' (BestStart programme) plus '16 Areas of Play'; otherwise standard Te Whariki play-based; purpose-built native-bush setting",
+   "hours": "Mon-Fri 7:00am-5:30pm",
+   "feesu3": "Unpublished (per centre; +2% card surcharge)",
+   "fees3": "Unpublished; 20 Hours 3-5",
+   "h20": "Yes 3-5; not for 2yo",
+   "ero": "Positive first report (as Topkids): warm relationships, independent articulate children; more uninterrupted play, strengthen bicultural (date NF)",
+   "google": "5.0 (23)",
+   "ph": "09 459 6342",
+   "em": "maunu@best-start.org",
+   "web": "https://best-start.org/centres/beststart-maunu-village",
+   "addr": "460 Maunu Road, Maunu, Whangarei 0110",
+   "lat": -35.7401522,
+   "lng": 174.2813571,
+   "adv": "Large, well-resourced, long hours (7am), open through summer, structured programmes + Set for School",
+   "concern": "Large/corporate; fees unpublished; confirm meals; popular so infant spaces need early booking",
+   "action": "Request enrolment forms to secure; confirm both same days; ask fees (under-3 & over-3) + exact Christmas dates; video call.",
+   "inreg": "Yes",
+   "cap": "150 (up to 30 under-2)",
+   "ratios": "Better than minimum (chain standard); qualified teachers; Storypark",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Purpose-built natural/native-bush outdoor environment",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "One of the higher-volume happy review sets in town (5.0 over 23) and 80%+ recommend; warm teachers and good communication.",
+   "rep_good": [
+    "'child loves her teachers, comes home full of stories'",
+    "'good communication, good management, good activities and learning'",
+    "Warm, respectful relationships; confident learners (ERO)",
+    "80%+ families recommend"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "Awhi",
+   "n": "Awhi Early Learning Centre",
+   "suburb": "Morningside",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published (confirm via Facebook)",
+   "avail": "Limited availability (Kindello)",
+   "ages": "3 months - 6 years",
+   "a2": "Yes (up to 15 under-2)",
+   "a5": "Yes (to 6)",
+   "contacted": "",
+   "count4": "",
+   "phil": "Christian faith-based (their own words: 'a Faith Based Early Learning Centre', linked to Arise Church); aroha / whanaungatanga; Te Whariki-aligned; bicultural",
+   "hours": "Mon-Fri 7:30am-5:30pm",
+   "feesu3": "Unpublished",
+   "fees3": "Unpublished; 20 Hours 3+",
+   "h20": "Yes 3+; 2yo NF",
+   "ero": "Akanuku Assurance Review Apr 2023: sound assessment/planning; ~1/3 children Maori; operating to standards",
+   "google": "5.0 (6)",
+   "ph": "09 430 3050",
+   "em": "manager@awhielc.co.nz",
+   "web": "https://awhielc.co.nz",
+   "addr": "16 Porowini Avenue, Morningside, Whangarei 0110",
+   "lat": -35.70997594,
+   "lng": 174.31606252,
+   "adv": "Established, well-staffed, strong family recommendation, broad age range incl young babies, full hours",
+   "concern": "Explicitly Christian/faith-based ethos (may or may not suit); fees unpublished; only assurance (not quality) ERO",
+   "action": "Decide on the Christian ethos fit; confirm Christmas dates; request fees; confirm 2yo + 5yo same-days vacancy",
+   "inreg": "Yes",
+   "cap": "59 (up to 15 under-2)",
+   "ratios": "~8 qualified + 2 unqualified + manager",
+   "langs": "English + Te Reo Maori (~1/3 tamariki Maori)",
+   "outdoor": "On-site outdoor area; regular excursions",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "A Christian (Elim-affiliated) centre, well led and loving, though the busy Porowini Ave location draws parking complaints.",
+   "rep_good": [
+    "'My two daughters both attended here and liked it'",
+    "Well led; trusting relationships (ERO); loving environment"
+   ],
+   "rep_bad": [
+    "'parking hassle, Porowini Ave is a very busy street ... at rush hour and school pick up times'",
+    "Faith-based character (a fit consideration)"
+   ]
+  },
+  {
+   "id": "MagicalMoments",
+   "n": "Magical Moments Childcare",
+   "suburb": "Morningside",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published (confirm)",
+   "avail": "Likely available (new, enrolling)",
+   "ages": "0-5",
+   "a2": "Yes (mixed-age)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); Te Ao Maori / Tiriti-based framing; mixed-age",
+   "hours": "Mon-Fri 7:30am-5:00pm",
+   "feesu3": "Unpublished; '20 hours free for all age groups' opening offer (verify)",
+   "fees3": "Unpublished; 20 Hours 3+",
+   "h20": "Yes; opening promo claims under-3 free hours - verify",
+   "ero": "No ERO report yet (newly licensed). Prior service at site (Whangarei Childcare Centre, 11513) closed",
+   "google": "5.0 (2)",
+   "ph": "021 221 1584",
+   "em": "via site form",
+   "web": "https://www.magicalmoment.co.nz",
+   "addr": "8a Porowini Avenue, Morningside, Whangarei 0110",
+   "lat": -35.72969928,
+   "lng": 174.31616376,
+   "adv": "Brand-new facility, actively enrolling, opening incentive, mixed-age so siblings together",
+   "concern": "Unproven (no ERO, thin track record); founded after predecessor's failure at same site; details unpublished",
+   "action": "Verify the 'free hours for all ages' offer terms; confirm Christmas dates; ask about ratios/meals; confirm 2yo + 5yo place",
+   "inreg": "Yes",
+   "cap": "50 (up to 10 under-2)",
+   "ratios": "NF (new; no ERO yet)",
+   "langs": "English; Te Reo presence NF",
+   "outdoor": "Indoor + large outdoor (per legacy site)",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Quietly positive",
+   "rep_overall": "Very new operator at the former Whangarei Childcare Centre site; the few reviews are positive ('great atmosphere') but the track record is short.",
+   "rep_good": [
+    "'Welcoming Early Learning Centre. Great atmosphere'",
+    "Flexible full/part-day, mainstream programme"
+   ],
+   "rep_bad": [
+    "Very new; thin review base",
+    "Previous operator on the site closed May 2024"
+   ]
+  },
+  {
+   "id": "OkaraEducare",
+   "n": "Okara Educare",
+   "suburb": "Morningside",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published (Educare centres typically ~late Dec to mid-Jan)",
+   "avail": "Yes - both, can hold for Sep; both in Tuakana together (reply 22 Jun)",
+   "ages": "0-5",
+   "a2": "Yes (up to 20 under-2; separate infant/toddler area)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "15",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); Educare group; whanau-focused; strong te ao Maori; natural environment",
+   "hours": "Mon-Fri 7:30am-5:30pm",
+   "feesu3": "Full day $71/day (min 2); school hrs 9-3 $56/day; FT capped $287/wk; hourly $9.50 (ToT 2025)",
+   "fees3": "First 20 ECE hrs free; $9.50/hr above 20hrs; min 2x4hr sessions/wk (ToT 2025)",
+   "h20": "Yes 3-5; not for 2yo",
+   "ero": "7 May 2019 Well placed: caring responsive teaching; te reo visible; kapa haka; strong transitions (dated)",
+   "google": "5.0 (3)",
+   "ph": "09 974 8811",
+   "em": "okara@educare.co.nz",
+   "web": "https://educare.co.nz/educare-centres/okara/",
+   "addr": "17 Jellicoe Street, Morningside (Okara), Whangarei 0110",
+   "lat": -35.73439588,
+   "lng": 174.32662541,
+   "adv": "Large, well-resourced, group-backed; good ratios; strong bicultural; broad 0-5; central Morningside",
+   "concern": "ERO dated (2019); larger 70-child centre; fees unpublished; 20 Hours optional charge",
+   "action": "Request/return enrolment forms (+ birth certs, immunisation) to hold; ask exact Christmas dates; confirm days; video call. Fees received (ToT 2025).",
+   "inreg": "Yes",
+   "cap": "70 (up to 20 under-2)",
+   "ratios": "Under-2 1:4, over-2 1:8; 80%+ qualified",
+   "langs": "English + Te Reo Maori (~half children Maori)",
+   "outdoor": "Purpose-built (2012); well-designed natural area; large indoor-outdoor flow",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "Good Google score and a strong purpose-built natural environment, but little written parent feedback online.",
+   "rep_good": [
+    "Purpose-built (2012), exceptional natural environment",
+    "Children use natural resources in play",
+    "ERO 'well placed'"
+   ],
+   "rep_bad": [
+    "Little written parent feedback online"
+   ]
+  },
+  {
+   "id": "KiwiKids",
+   "n": "Kiwi Kids Early Learning Centre",
+   "suburb": "Onerahi",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published (check Facebook)",
+   "avail": "Yes - both from Sep (4/5 room to 20, strong same-age peers); can pencil in; four separate rooms (reply 23 Jun)",
+   "ages": "0-5",
+   "a2": "Yes (Piwakawaka infants + Tui Tots toddlers; up to 16 under-2)",
+   "a5": "Yes (Kereru Kindy)",
+   "contacted": "Yes",
+   "count4": "up to 20",
+   "phil": "Nature-based identity: 'Bush School' / Nature Kindergarten programme (regular bush excursions); outdoor focus; Te Whariki; te reo room names",
+   "hours": "Mon-Fri 7:00am-5:30pm; AM/PM/school-day/full-day session options",
+   "feesu3": "Unpublished (handbook)",
+   "fees3": "Unpublished; 20 Hours 3+",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "Positive (date NF): nurturing reciprocal relationships, calm unhurried, well-supported transitions, strong belonging",
+   "google": "4.8 (15)",
+   "ph": "09 436 3085",
+   "em": "info@kiwikidselc.co.nz",
+   "web": "https://www.kiwikidselc.co.nz",
+   "addr": "4 Waimahanga Road, Onerahi, Whangarei 0110",
+   "lat": -35.74177528,
+   "lng": 174.36261418,
+   "adv": "Distinctive nature programme (Bush School + farm); long hours (7-5:30); flexible sessions good for 3-4 days; both children 0-5",
+   "concern": "Onerahi (further from west/central cluster); fees unpublished; ERO date/details unconfirmed",
+   "action": "Reply: comfortable with separate rooms, ask if siblings connect in day; accept pencil-in + Aug visit; ask fees, exact Christmas dates, Veli start (14 Sep) same days.",
+   "inreg": "Yes",
+   "cap": "75 (up to 16 under-2)",
+   "ratios": "Three developmental groups; qualified team",
+   "langs": "English + Te Reo Maori (room names)",
+   "outdoor": "Strong: secure natural area, Bush School (bush 2x/week), on-site mini-farm (goat, chickens, ducks)",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "Well-liked Onerahi centre with a distinctive twice-weekly Bush School and respectful family relationships; 80%+ recommend.",
+   "rep_good": [
+    "Signature 'Bush School' 2 days/week (trees and creeks)",
+    "Respectful, collaborative parent relationships (ERO)",
+    "4.8 over 15 reviews; 80%+ recommend"
+   ],
+   "rep_bad": [
+    "An earlier ERO flagged leadership / programme planning (since improved)"
+   ]
+  },
+  {
+   "id": "BestStartKotata",
+   "n": "BestStart Kotata Heights",
+   "suburb": "Port Whangarei",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published; BestStart long-day chain norm (open year-round bar stat days + short Christmas)",
+   "avail": "Yes - both, Sep (Saima to 6th birthday; ~20 in 4-5yo room); hours 7-5.30 (reply 23 Jun)",
+   "ages": "3 months - 5",
+   "a2": "Yes (infant + toddler rooms)",
+   "a5": "Yes (preschool room)",
+   "contacted": "Yes",
+   "count4": "~20",
+   "phil": "'Set for School' (BestStart programme); te ao Maori vision / whakatauki (mana-enhancing); otherwise standard Te Whariki play-based; Storypark",
+   "hours": "Mon-Fri 7:00am-5:30pm",
+   "feesu3": "Unpublished",
+   "fees3": "Unpublished; 20 Hours 3-5; WINZ available",
+   "h20": "Yes 3-5; not for 2yo",
+   "ero": "NF / possibly not yet reviewed (recently opened)",
+   "google": "4.9 (9)",
+   "ph": "09 558 1079",
+   "em": "kotata@best-start.org (pattern; confirm)",
+   "web": "https://best-start.org/centres/beststart-kotata-heights",
+   "addr": "25 Kotata Rise, Port Whangarei, Whangarei 0110",
+   "lat": -35.74323604,
+   "lng": 174.31731064,
+   "adv": "On-site cooked meals confirmed; long hours; open through summer; newer facility may have availability; modern spaces",
+   "concern": "Port Whangarei (further from west/central); no ERO report yet; fees unpublished",
+   "action": "Reply SENT 24 Jun (enrolment form + video call requested; call deferred to after our break, will also visit in Aug). Awaiting: enrolment form; 4-day fees (both kids); summer closure days; whether Veli must wait until 14 Sep or they accept under-2.",
+   "inreg": "Yes",
+   "cap": "100 (up to 24 under-2)",
+   "ratios": "Chain standard; qualified teachers; centre cook",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Expansive natural outdoor play area",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "New (2024) but already very positive on settling-in and nurturing, family-like care.",
+   "rep_good": [
+    "'My daughter absolutely loves her daycare and the teachers'",
+    "'seamless ... settling in ... so kind and caring'",
+    "Friendly, welcoming; caters to dietary needs"
+   ],
+   "rep_bad": [
+    "New centre, small review base"
+   ]
+  },
+  {
+   "id": "ChristopherRobin",
+   "n": "Christopher and Robin Early Childhood Centre",
+   "suburb": "Raumanga",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Only 'closed statutory holidays' stated; private full-day so likely short Christmas block",
+   "avail": "Yes - both (Saima Te Puawai, Veli Kaitiaki; siblings connect in day); ~8 4.5yos; will waitlist to hold (reply 22 Jun)",
+   "ages": "3 months - 6 years",
+   "a2": "Yes (Kaitiaki room; up to 25 under-2)",
+   "a5": "Yes (Te Puawai 3-6)",
+   "contacted": "",
+   "count4": "~8",
+   "phil": "RIE (Pikler / Gerber) for infants and toddlers; Reggio Emilia project approach for preschool and kindergarten; Christian emphasis; two rooms (under-3 Kaitiaki, over-3 Te Puawai)",
+   "hours": "Mon-Fri 7:30am-5:30pm; core 9am-3pm session",
+   "feesu3": "On request (unpublished online)",
+   "fees3": "On request; 20 Hours 3+",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "19 Dec 2019 WELL PLACED: positive respectful interactions, strong key-teacher relationships; extend resources/leadership",
+   "google": "4.9 (7)",
+   "ph": "09 430 1020",
+   "em": "info@christopherandrobin.co.nz",
+   "web": "https://christopherandrobin.co.nz",
+   "addr": "12 Gumdigger Place, Raumanga, Whangarei 0110",
+   "lat": -35.751019,
+   "lng": 174.31182703,
+   "adv": "Best-documented fit: long hours, min 3 days/6h matches plan, both age groups one site, meals, strong ERO, almost certainly open through summer",
+   "concern": "Fees not published (email); Christian-values framing (may/may not suit); exact summer dates need confirming",
+   "action": "Reply SENT 24 Jun (proceeding; enrolment forms requested, will waitlist to hold). Awaiting: enrolment forms; 4-day fees; summer closure days; whether Veli must wait until 14 Sep or they accept under-2.",
+   "inreg": "Yes",
+   "cap": "75 (up to 25 under-2)",
+   "ratios": "Better than minimum both age groups (2019); manager + 6 qualified + 2-3 trainees",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Two purpose-built outdoor areas (one per age group); spacious Raumanga site",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Highly rated",
+   "rep_overall": "One of the strongest reputations in Whangarei - a glowing ERO (rare 4-year cycle), positive press and qualified key-teacher care.",
+   "rep_good": [
+    "On ERO's 4-year cycle (one of ~7 of 209 in Northland) = utmost confidence",
+    "Northern Advocate feature 'A+ for childhood centre'",
+    "'Excellent ... experienced and qualified staff'",
+    "Key-teacher system, nutritious meals, age-separated spaces"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "HeKaakano",
+   "n": "He Kaakano Early Learning Centre",
+   "suburb": "Raumanga",
+   "type": "Education & care",
+   "os": "closed",
+   "sdates": "Not published; likely follows school terms",
+   "avail": "Waitlist only",
+   "ages": "birth to school",
+   "a2": "Yes (pepi room; up to 35 under-2 licensed, ~12 enrolled)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "No recognised named pedagogy; strong Maori cultural integration (te reo / tikanga, Te Whatu Pokeka kaupapa Maori assessment), English-medium not immersion; supports tamariki of teen parents (Te Ora Hou Trust)",
+   "hours": "Mon-Fri 8:30am-4:30pm (school-style; confirm; Kindello says 8:30-3:30)",
+   "feesu3": "Unpublished (community/non-profit, likely lower)",
+   "fees3": "Unpublished; offers 30 ECE hours 3+",
+   "h20": "Yes; 30 hours for 3+; not for 2yo",
+   "ero": "Akarangi-style ~2023: caring inclusive relationships, strong whanaungatanga; build evaluation capability (date approx)",
+   "google": "3.5 (2)",
+   "ph": "09 438 1840",
+   "em": "hekakano@teorahou.org.nz",
+   "web": "https://tohn.org.nz/he-kaakano-ece",
+   "addr": "55 Raumanga Valley Road, Raumanga, Whangarei 0110",
+   "lat": -35.74063951,
+   "lng": 174.30296072,
+   "adv": "Community non-profit; strong Maori kaupapa; small nurturing rolls; meals; likely lower fees",
+   "concern": "Likely CLOSED over the summer window; priority to teen-parent families; waitlist; short daily hours",
+   "action": "PRIORITY: confirm whether open over Christmas/summer (likely closed); confirm whether non-teen-parent family can enrol; request fees",
+   "inreg": "Yes",
+   "cap": "50 (up to 35 under-2)",
+   "ratios": "Qualified teachers; small rolls = good ratios; not 100% certificated",
+   "langs": "English + Te Reo Maori (integrated)",
+   "outdoor": "Spacious park-like grounds; neighbours NorthTec",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Mixed signals",
+   "rep_overall": "A kaupapa-driven centre (supports children of teenage parents) with a warm, whanau-centred ERO, but the lowest - tiny-sample - Google score in the set.",
+   "rep_good": [
+    "Warm welcome; wellbeing prioritised; whanau part of the centre (ERO)",
+    "Calm, unhurried for infants; well-resourced",
+    "Supports teen parents (Te Ora Hou Northland)"
+   ],
+   "rep_bad": [
+    "Google 3.5 (2) - lowest in the set (very small sample, no negative text found)"
+   ]
+  },
+  {
+   "id": "Geckos",
+   "n": "Geckos Early Learning Centre",
+   "suburb": "Regent",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Closed statutory holidays only stated; no Christmas block mentioned",
+   "avail": "Yes - both, from Aug/Sep (10 in 4-5yo group; boutique, max 26); secure soon (reply 23 Jun)",
+   "ages": "2 to school (this site)",
+   "a2": "2yo Yes (under-2 at sister Little Geckos)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "10",
+   "phil": "Reggio Emilia-inspired (their own words: 'inspired by the Reggio Emilia approach'); Enviroschools member; child-led; te ao Maori",
+   "hours": "Mon-Fri ~7:30am-6:00pm (confirm for Cross St)",
+   "feesu3": "Unpublished (talk through on visit)",
+   "fees3": "Unpublished; 20 Hours for over-3",
+   "h20": "Yes for over-3; not for 2yo",
+   "ero": "Positive (~2022-23): calm unhurried environment, strong belonging, child-led; QI actions on assessment/internal evaluation",
+   "google": "4.4 (7)",
+   "ph": "09 438 6810",
+   "em": "geckos@geckos.net.nz (cc info@geckos.net.nz)",
+   "web": "https://geckoschildcare.co.nz",
+   "addr": "11a Cross Street, Regent, Whangarei 0112",
+   "lat": -35.71664194,
+   "lng": 174.32063231,
+   "adv": "Highest review signal among Regent group; Reggio-inspired calm environment; long hours; group can take both children",
+   "concern": "Both kids not at single site (Veli at Little Geckos until 2; Saima here); often full; fees + email unpublished",
+   "action": "Reply SENT 24 Jun (DOBs provided; virtual tour to be scheduled after our break). Awaiting: teacher-child ratios (younger & older); 4-day fees; summer closure days; whether Veli must wait until 14 Sep or they accept under-2.",
+   "inreg": "Yes",
+   "cap": "24-26 (0 under-2 at this site)",
+   "ratios": "Small licence (26); qualified teachers",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Purpose-built sheltered indoor/outdoor; beside Whangarei Primary",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "Homely centre in a renovated house by Whangarei Primary, praised for outings and caring teachers and a calm, unhurried feel.",
+   "rep_good": [
+    "'Geckos' outings and caring teachers make my daughter so excited to go!'",
+    "Calm, unhurried; strong belonging (ERO)",
+    "Very well-managed transitions to school",
+    "80%+ families recommend; featured on ExploreWhangarei"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "Hatea",
+   "n": "Hatea Early Learning Centre",
+   "suburb": "Regent",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published (only 'public holidays closed')",
+   "avail": "Not stated, ask",
+   "ages": "2 to school",
+   "a2": "2yo Yes; under-2 No",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "No distinctive named philosophy; self-describes as 'progressive and holistic', child-led; small boutique centre",
+   "hours": "Mon-Fri 8:00am-4:30pm (shortest day)",
+   "feesu3": "2-3yo: short day (6.5h) $26/day; full day (8.5h) $42.50/day; min 2 days",
+   "fees3": "3+ (20 Hrs Free): $6.50/h outside free hours; min 2 days",
+   "h20": "Yes for 3+; not for 2yo",
+   "ero": "NF (new ~2021; verify ero.govt.nz/institution/46117)",
+   "google": "4.9 (8)",
+   "ph": "09 601 3308",
+   "em": "info@hateaelc.co.nz",
+   "web": "https://hateaelc.co.nz",
+   "addr": "2A Deveron Street, Regent, Whangarei 0112",
+   "lat": -35.71374994,
+   "lng": 174.32382523,
+   "adv": "Published low fees + flexible short/full/2-min days; very small/homely (24); central Regent; bilingual framing",
+   "concern": "2+ only (Veli from 2nd birthday); shortest hours (8-4:30) may not cover work; summer + ERO unconfirmed",
+   "action": "Confirm Christmas dates + ERO rating; confirm hours cover the workday; confirm 2yo + 5yo same-days place",
+   "inreg": "Yes",
+   "cap": "24 (0 under-2)",
+   "ratios": "Max 24 (homely); qualified teachers",
+   "langs": "English + Te Reo Maori (bilingual framing)",
+   "outdoor": "Small homely centre; outdoor play",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "Small boutique Regent centre with a strong reputation for nurturing, high-quality bicultural/multicultural care and a real sense of belonging.",
+   "rep_good": [
+    "Genuine sense of belonging; high-quality programme (ERO)",
+    "Boutique scale, nurturing",
+    "Bicultural heritage + multicultural mix valued",
+    "Featured on ExploreWhangarei 'best daycares'"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "KereruKindy",
+   "n": "Kereru Kindy",
+   "suburb": "Regent",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published (no charge public holidays)",
+   "avail": "Confirmed (Marie Anderson, 21 Jun 2026): likely a couple of vacancies for both Saima and Veli from ~Sep 2026 (varies with enrolments). 12 children 4yrs+ (two turning 5+). Video call offered.",
+   "ages": "2-6",
+   "a2": "2yo Yes; under-2 No",
+   "a5": "Yes (to age 6)",
+   "contacted": "Yes",
+   "count4": "12",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); boutique 'free-range', home-from-home mixed-age cottage kindy (a descriptor, not a pedagogy); open-ended play",
+   "hours": "Mon-Fri 7:30am-5:30pm; all-day/half-day/kindy 9-3 options; pick-up service",
+   "feesu3": "Unpublished (differs by age, inquire)",
+   "fees3": "Unpublished; advertises 20 + '30 hours free' 3-4yo",
+   "h20": "Yes; not for 2yo",
+   "ero": "Requires further development (leadership/governance) ~2023, first review under new ownership",
+   "google": "5.0 (6)",
+   "ph": "09 430 8804",
+   "em": "support@kererukindy.co.nz",
+   "web": "https://kererukindy.co.nz",
+   "addr": "152 Bank Street, Whangarei (Regent/CBD) 0110",
+   "lat": -35.71897902,
+   "lng": 174.32179061,
+   "adv": "Boutique mixed-age (no transitions); all teachers qualified; sibling priority; pick-up service; currently enrolling",
+   "concern": "2+ only (Veli only from 2nd birthday 14 Sep); current ERO 'requires further development'; fees + summer dates unpublished",
+   "action": "Replied 21 Jun: has space; peers answered. At video call confirm: Christmas/summer dates; fees (2yo + 3+); Veli start ~14 Sep on same days as Saima; ask re 2023 ERO governance.",
+   "inreg": "Yes",
+   "cap": "30 (0 under-2)",
+   "ratios": "All teachers qualified/registered + aides/trainees; boutique (30)",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Cottage kindy, wooden playground; boutique",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "Small boutique cottage-style centre that is warmly praised - 100% recommend on Facebook and 80%+ on MyECE, with an individualised, nurturing approach.",
+   "rep_good": [
+    "100% recommend on Facebook (5 reviews)",
+    "80%+ families recommend (MyECE/OECE)",
+    "Boutique scale, warm and nurturing (ERO 'Well placed')",
+    "Planning built on each child's interests + parents' aspirations"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "LittleGeckos",
+   "n": "Little Geckos Childcare Centre",
+   "suburb": "Regent",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Closed statutory holidays only (per FAQ)",
+   "avail": "Not stated (often full)",
+   "ages": "0-2 only",
+   "a2": "Yes (whole centre is under-2)",
+   "a5": "No (5yo goes to sister Geckos site)",
+   "contacted": "",
+   "count4": "",
+   "phil": "Reggio Emilia-inspired (Geckos brand, 'both our centres'); infant room emphasises unhurried, respectful care; Te Whariki",
+   "hours": "Mon-Fri 8:00am-5:00pm",
+   "feesu3": "Unpublished",
+   "fees3": "n/a (under-2 site)",
+   "h20": "No (under-2 site; 20 Hrs is 3+)",
+   "ero": "Akanuku/Assurance Review (under-2 site); relicensed under new ownership Oct 2019; taking reasonable steps (date NF)",
+   "google": "5.0 (5)",
+   "ph": "09 459 1860",
+   "em": "littlegeckos@geckos.net.nz (cc info@geckos.net.nz)",
+   "web": "https://geckoschildcare.co.nz",
+   "addr": "11 Deveron Street, Regent, Whangarei 0112",
+   "lat": -35.71368672,
+   "lng": 174.32523671,
+   "adv": "Very small intimate baby-specialist environment for Veli (under-2)",
+   "concern": "Splits the two children across two sites; no meals; 5pm close is early; only fits Veli",
+   "action": "Only relevant for Veli as under-2; confirm whether Saima can attend sister Geckos site same days; confirm Christmas dates and under-2 vacancy from Sep",
+   "inreg": "Yes",
+   "cap": "19 (all under-2)",
+   "ratios": "Small team; qualified ECE teachers; under-2 1:4 or better",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Purpose-built sheltered play areas",
+   "accepts2": "yes",
+   "accepts5": "no",
+   "viable": false,
+   "rep": "Warmly praised",
+   "rep_overall": "Dedicated infant/toddler ('home away from home') site of the Geckos group, with strong 5.0 reviews.",
+   "rep_good": [
+    "Specialist under-2 care, home-away-from-home",
+    "Meaningful, reciprocal relationships (ERO)",
+    "Language-rich, bicultural",
+    "Strong 5.0 (5)"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "NorfolkStreet",
+   "n": "Norfolk Street Educare",
+   "suburb": "Regent",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published (confirm)",
+   "avail": "Likely yes - both, probably same building; confirm same days (reply 22 Jun)",
+   "ages": "0-5",
+   "a2": "Yes (up to 25 under-2; purpose-built under-2 facility)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); Educare group; te ao Maori, weekly kapa haka",
+   "hours": "Mon-Fri 7:30am-5:30pm (confirm)",
+   "feesu3": "Full day $71/day (min 2); school hrs 9-3 $47/day; FT capped $305/wk; hourly $8.40 (ToT 2025)",
+   "fees3": "With 20 Hrs ECE: sessions free / up to 3 days school hrs free (optional charge); FT capped $190; $8.40/hr above 20hrs (ToT 2025)",
+   "h20": "Yes for 3-5; not for 2yo",
+   "ero": "3 May 2019 WELL PLACED (strongest, but dated): positive interactions, good infant care, te reo visible, well led",
+   "google": "5.0 (2) [Over-2s listing; Under-3s listing 5.0 (8)]",
+   "ph": "09 438 4699",
+   "em": "norfolk@educare.co.nz",
+   "web": "https://educare.co.nz/educare-centres/norfolk/",
+   "addr": "23 Norfolk Street, Regent, Whangarei 0112",
+   "lat": -35.71993334,
+   "lng": 174.32184521,
+   "adv": "Best ERO (Well placed 2019); both children 0-5 incl strong under-2; good ratios; kapa haka",
+   "concern": "Fees + summer dates unpublished; ERO is 2019 (older than peers); Regent (off CBD core)",
+   "action": "Confirm both same days (3-4) from Sep + Veli's room; ask exact Christmas dates; video call. Fees received (ToT 2025).",
+   "inreg": "Yes",
+   "cap": "56 (up to 25 under-2)",
+   "ratios": "~80%+ qualified; Under-2 1:4, Over-2 1:8 (2019, better than min)",
+   "langs": "English + Te Reo Maori (weekly kapa haka)",
+   "outdoor": "Two buildings each with outdoor areas; under-3 purpose-built space",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "Valued for its family feel and natural play environment and 80%+ family recommend, though the lone SchoolParrot review is middling.",
+   "rep_good": [
+    "80%+ families recommend (MyECE/OECE)",
+    "Family feel; natural environment for play",
+    "Positive ERO (governance, management, teacher interactions)"
+   ],
+   "rep_bad": [
+    "A single SchoolParrot review rated 3.3/5 (lukewarm, tiny sample)"
+   ]
+  },
+  {
+   "id": "SteppingStones",
+   "n": "Stepping Stones Preschool",
+   "suburb": "Regent",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Open incl school holidays; closes ~2 weeks Christmas (dates notified)",
+   "avail": "Yes - both, same days, from Sep; Veli visits from 14 Sep; can hold (reply 22 Jun)",
+   "ages": "2-5",
+   "a2": "2yo Yes (special rates); under-2 No",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "No recognised named pedagogy (not Montessori/Reggio/etc.); bespoke in-house 'Child Development Model' (a puriri-tree dispositions metaphor built on Te Whariki, Vygotskian); strong bicultural; family values",
+   "hours": "Mon-Fri 7:45am-5:15pm",
+   "feesu3": "Unpublished (special rates for 2yo, contact)",
+   "fees3": "Unpublished; '30 ECE hours' for 3+",
+   "h20": "Yes; 2yo on special rates not free",
+   "ero": "Akanuku Assurance Review 4 Apr 2023: non-compliances identified then remedied; now reasonable steps. 2019 Well placed",
+   "google": "5.0 (1)",
+   "ph": "09 430 3523",
+   "em": "info@steppingstonespreschool.co.nz",
+   "web": "https://steppingstonespreschool.co.nz",
+   "addr": "153a Bank Street, Regent, Whangarei 0112",
+   "lat": -35.71780898,
+   "lng": 174.32170574,
+   "adv": "Open through school holidays/summer (2-wk Christmas close); central next to primary school; 50%-rate holiday allowance",
+   "concern": "2+ only (Veli from 2nd birthday); fees unpublished; meals not provided; half staff qualified",
+   "action": "Ask exact Christmas/summer dates + fees (3 & 4-day, under-3 & over-3); arrange video call; clarify hold-the-space steps.",
+   "inreg": "Yes",
+   "cap": "26 (0 under-2)",
+   "ratios": "6 teachers, 3 qualified (2023); better than minimum (over-2)",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Bungalow with tree-filled backyard (two puriri); next to Whangarei Primary",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Quietly positive",
+   "rep_overall": "Small, central language-rich preschool by Whangarei Primary; strongly recommended by families but with a thin public-review base.",
+   "rep_good": [
+    "80%+ families recommend (MyECE/OECE)",
+    "Language-rich environment; planning from children's interests (ERO)",
+    "Central, next to Whangarei Primary"
+   ],
+   "rep_bad": [
+    "Few public reviews (1 Google)",
+    "An ERO report noted 6 teachers, 3 qualified - worth asking about the staffing mix"
+   ]
+  },
+  {
+   "id": "HeWakaEkeNoa",
+   "n": "He Waka Eke Noa Early Learning Centre",
+   "suburb": "Riverside",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Website/Education Counts: 'operates full year'",
+   "avail": "Some over-2 spaces; under-2 likely waitlisted",
+   "ages": "~3 months-5",
+   "a2": "Yes (up to 10 under-2; transition pathway)",
+   "a5": "Yes (transition-to-school)",
+   "contacted": "",
+   "count4": "",
+   "phil": "Kaupapa Maori / te ao Maori identity (te reo integrated, not full immersion); whanau and community-based; strong te taiao (nature) focus; holistic Te Whariki",
+   "hours": "Mon-Fri ~7:45am-5:15pm",
+   "feesu3": "Under-3 $55.00/day (full day, meal incl)",
+   "fees3": "Over-3 $7.50/hour (ECE hours) + $5/day meal; $50 admin/yr (April)",
+   "h20": "Yes 3+; not for 2yo (under-3 $55/day)",
+   "ero": "Akarangi Quality Evaluation 9 Sep 2024: 'Whakato Emerging' (lowest tier); calm respectful environment but bicultural/Te Whariki/planning early-stage",
+   "google": "5.0 (3)",
+   "ph": "09 438 8366",
+   "em": "office@hewakaekenoa.com",
+   "web": "https://hewakaekenoa.com",
+   "addr": "60 Riverside Drive, Riverside, Whangarei 0112",
+   "lat": -35.72794314,
+   "lng": 174.33498899,
+   "adv": "Explicit year-round; published affordable fees; small/boutique; strong Maori environment; central riverside",
+   "concern": "ERO 'Emerging' (lowest tier, Sep 2024); only 10 under-2 places (Veli not assured); new leadership bedding in",
+   "action": "Confirm under-2 (Veli) availability from Sep; ask about the Sep-2024 'Emerging' ERO improvements; confirm Christmas days",
+   "inreg": "Yes",
+   "cap": "38 (up to 10 under-2)",
+   "ratios": "80-99% qualified; under-2 1:3, over-2 1:4 (earlier)",
+   "langs": "English + Te Reo Maori (Maori-centred)",
+   "outdoor": "Riverside at base of Parihaka beside Hatea awa; on-site mara/garden; nature-rich",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Quietly positive",
+   "rep_overall": "Small inclusive, Te Tiriti-based centre with a calm, respectful feel; good Google score but thin written feedback.",
+   "rep_good": [
+    "Calm, respectful, unhurried; predictable routines (ERO)",
+    "Inclusive, holistic, Te Tiriti-based vision"
+   ],
+   "rep_bad": [
+    "Little written parent feedback online"
+   ]
+  },
+  {
+   "id": "AvenuesEducare",
+   "n": "Avenues EduCare",
+   "suburb": "The Avenues",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Open through school holidays; Christmas/NY close <=2 weeks (exact dates notified)",
+   "avail": "Not stated, ask",
+   "ages": "0-5",
+   "a2": "Yes (up to 16 under-2; separate under-2 area)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); relationship-focused; community-based non-profit (unrelated to the Educare chain); natural outdoor setting",
+   "hours": "Mon-Fri 7:00am-5:30pm",
+   "feesu3": "Full day $62.50; half day $40.50; hourly $9 (single scale)",
+   "fees3": "Same scale; 20 Hours from age 3. Meal $3.50/day; $100 enrol fee",
+   "h20": "Yes from age 3; not for 2yo",
+   "ero": "Akanuku Assurance Review 27 Jan 2023: NOT MEETING on Health & Safety and Governance; ERO recommended Ministry reassess licence. Prior 2019/2015 Well placed",
+   "google": "5.0 (2)",
+   "ph": "09 438 7194",
+   "em": "avenues.educare@xtra.co.nz",
+   "web": "https://avenueseducare.co.nz",
+   "addr": "83 Fourth Avenue, Whangarei (The Avenues) 0110",
+   "lat": -35.72944096,
+   "lng": 174.30686181,
+   "adv": "Published fees + sibling discount; meals included; both children 0-5 one site; open through summer holidays",
+   "concern": "Serious Jan-2023 ERO (not meeting; licence reassessment recommended) - verify current compliance/licence status; dated website",
+   "action": "PRIORITY: confirm current ERO/licence compliance status after the Jan-2023 not-meeting result; confirm exact Christmas dates; confirm 2yo + 5yo same-days vacancy",
+   "inreg": "Yes",
+   "cap": "40 (up to 16 under-2)",
+   "ratios": "6 qualified teachers + admin + cook; ratios better than minimum (2019)",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Spacious natural area, mature trees; historic building",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Community-respected",
+   "rep_overall": "The oldest community-based centre in Whangarei (parent-governed incorporated society), valued for genuine family partnership; 80%+ recommend.",
+   "rep_good": [
+    "Oldest community-based centre; parent-elected governance",
+    "80%+ families recommend (MyECE/OECE)",
+    "Language-rich; meaningful positive interactions (ERO)",
+    "Strong family-partnership ethos"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "EducareCity",
+   "n": "Educare City",
+   "suburb": "Whangarei Central",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published (confirm)",
+   "avail": "Yes - both, period we outlined (~14 in 4-5yo group; fully catered; flexible settling) (reply 23 Jun)",
+   "ages": "0-5",
+   "a2": "Yes (purpose-built under-2 area)",
+   "a5": "Yes (to school age)",
+   "contacted": "Yes",
+   "count4": "~14",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); part of the Educare group; bicultural; 'environment as third teacher' language (Reggio-adjacent but Reggio not claimed)",
+   "hours": "Mon-Fri 7:30am-5:30pm",
+   "feesu3": "Unpublished (on request)",
+   "fees3": "Unpublished; 20 Hours applies, optional charge",
+   "h20": "Yes for 3-5; not for 2yo",
+   "ero": "Akanuku Assurance Review ~2023: non-compliances identified then remedied; now taking reasonable steps. Next review 3 yrs",
+   "google": "5.0 (8)",
+   "ph": "09 430 7378",
+   "em": "city@educare.co.nz",
+   "web": "https://educare.co.nz/educare-centres/city/",
+   "addr": "11 Hunt Street, Whangarei Central 0110",
+   "lat": -35.72204156,
+   "lng": 174.31899606,
+   "adv": "Only large 0-5 purpose-built CBD site taking both children incl genuine under-2 provision; central, parking",
+   "concern": "Fees unpublished; recent ERO flagged (since-remedied) non-compliances; large (124)",
+   "action": "Reply SENT 24 Jun (proceeding; enrolment pack + virtual walkthrough requested). Awaiting: confirm both on all weekdays for a 4-day week (Mon-Thu/Tue-Fri); 4-day fees (under-3 & 3+); summer closure days.",
+   "inreg": "Yes",
+   "cap": "124 (up to 25 under-2)",
+   "ratios": "~5 registered teachers + support; better than minimum (sister sites)",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Purpose-built indoor/outdoor; parking on Vinery Lane",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "Solid 5.0 Google score and a respected, diverse central-CBD centre, though written parent feedback is thin.",
+   "rep_good": [
+    "Diverse, inclusive community (approx 1/4 Maori, 1/4 Indian heritage)",
+    "Responsive curriculum; meaningful positive interactions (ERO)",
+    "Regular parent involvement in decisions",
+    "Central CBD; 5 registered teachers"
+   ],
+   "rep_bad": [
+    "Little written parent feedback online"
+   ]
+  },
+  {
+   "id": "BusyBeesWhauValley",
+   "n": "Busy Bees Whau Valley",
+   "suburb": "Whau Valley",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Open all year incl school holidays AND Christmas/NY period; statutory days only",
+   "avail": "Not stated, ask",
+   "ages": "birth-6",
+   "a2": "Yes (Kowhai room up to 2)",
+   "a5": "Yes (Kauri room 2-6)",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "'Bee Curious' (Busy Bees chain curriculum framework) plus MOVE and Nourish programmes; built on Te Whariki; play-based; national chain",
+   "hours": "Mon-Fri 7:30am-5:30pm",
+   "feesu3": "Unpublished (enquire)",
+   "fees3": "Unpublished; 20 Hours referenced",
+   "h20": "Yes for 3+; not for 2yo",
+   "ero": "Institution report exists; most retrievable language older (2014-2020); rating/date NF",
+   "google": "4.8 (16)",
+   "ph": "09 459 4255",
+   "em": "manager@whauvalley.busybees.org.nz",
+   "web": "https://busybees.org.nz/whauvalley",
+   "addr": "25 Moody Avenue, Whau Valley, Whangarei 0110",
+   "lat": -35.6997652,
+   "lng": 174.3166357,
+   "adv": "CONFIRMED open through summer; both children one centre; meals + gardens + van; good hours",
+   "concern": "Exact current ERO rating/date + fees need confirming; chain scale",
+   "action": "Confirm exact statutory-day-only closures; request fees; confirm 2yo + 5yo same-days vacancy; ask current ERO",
+   "inreg": "Yes",
+   "cap": "65 (up to 20 under-2)",
+   "ratios": "Up to 65 (up to 20 under-2); qualified kaiako; chain support",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Large age-tailored playground; veggie gardens, fruit trees; centre van for excursions",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "Modern, well-equipped centre with caring staff, strong communication and repeat-family loyalty; 80%+ recommend.",
+   "rep_good": [
+    "'Brilliant staff and facilities' (two children, happy for years)",
+    "Friendly, caring teachers; great communication; clean",
+    "In-house cook (Heart Foundation Healthy Heart award)",
+    "Centre van helps families with transport"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "SeedsAndSprouts",
+   "n": "Seeds and Sprouts Childcare (now BJ's Childcare)",
+   "suburb": "Whau Valley",
+   "type": "Education & care",
+   "os": "ask",
+   "sdates": "Not published (no charge when closed/public holidays)",
+   "avail": "Some full-time spaces advertised - verify",
+   "ages": "0-5 (now advertised 2-6)",
+   "a2": "Yes (up to 10 under-2)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); concept of Akonga; Maori cultural-identity emphasis (tuakana-teina); now BJ's Childcare (live site seedsandsprouts.co.nz)",
+   "hours": "Mon-Fri ~7:45am-5:30pm",
+   "feesu3": "$6.00/hour (BJ's); min 6h/day, 2 days/week",
+   "fees3": "$6.00/hour with discounts; 20 Hours 3-5",
+   "h20": "Yes 3-5; advertises '30 Hours free incl 2yo' (promo - verify)",
+   "ero": "2025 report flagged non-compliance 'unacceptable risk to children'; rating Requires further development (predates new ownership)",
+   "google": "4.6 (5) [Google lists 'Seeds & Sprouts']",
+   "ph": "09 459 1778",
+   "em": "via bjschildcare.co.nz",
+   "web": "https://bjschildcare.co.nz",
+   "addr": "15 Moody Avenue, Whau Valley, Whangarei 0110",
+   "lat": -35.70128494,
+   "lng": 174.31633371,
+   "adv": "Published transparent pricing ($6/hr); small boutique; both children one centre; high Google rating; takes under-2",
+   "concern": "2025 ERO non-compliance = unacceptable risk to children (pre-new-ownership) - due diligence needed; brand in transition; summer dates unconfirmed",
+   "action": "PRIORITY: ask about the 2025 ERO non-compliance and what the new owners have fixed; verify the '30 hours free incl 2yo' offer; confirm Christmas dates + same-days vacancy",
+   "inreg": "Yes",
+   "cap": "40 (up to 10 under-2)",
+   "ratios": "Up to 40 FTE (up to 10 under-2); 1:10 stated; qualified + trainees",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Bungalow with natural environment; boutique (<=40)",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Compliance concerns",
+   "rep_overall": "Locally family-owned with a decent Google score, BUT the 2023 ERO review found regulatory non-compliance described as an unacceptable risk to children - the clearest red flag in the Whangarei set (under new ownership / rebrand to BJ's; verify current status).",
+   "rep_good": [
+    "Locally family-owned and operated",
+    "Reasonable Google score (4.6)"
+   ],
+   "rep_bad": [
+    "ERO 2023: 'non-compliance with regulatory standards that are an unacceptable risk to children'",
+    "Ownership change / rebrand in progress - confirm current compliance"
+   ]
+  },
+  {
+   "id": "Impact",
+   "n": "Impact Childcare Ltd",
+   "suburb": "Woodhill",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Not published; private full-day so likely short Christmas block",
+   "avail": "Confirmed (Shelly Budgen, 21 Jun 2026): both in September, together. 10-15 four-year-olds/day + ~20 aged 2-4. Saima can stay as a 5yo (until school-ready). Video call/tour offered.",
+   "ages": "3 months - 6 years",
+   "a2": "Yes (up to 12 under-2)",
+   "a5": "Yes (Te Waka, normally 4+)",
+   "contacted": "Yes",
+   "count4": "10-15",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); 'home-away-from-home' ethos, old-fashioned values; bicultural integration; gardening / cooking; te reo integrated",
+   "hours": "Mon-Fri 7:30am-5:30pm",
+   "feesu3": "Unpublished (enquire)",
+   "fees3": "Unpublished; 20 Hours 3+",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "Akarangi Quality Evaluation 12 Jun 2023: responsive respectful relationships; strengthen planning/assessment, visibility of languages/cultures",
+   "google": "4.4 (11)",
+   "ph": "09 438 5030",
+   "em": "admin@impactchildcare.nz",
+   "web": "https://impactchildcare.nz",
+   "addr": "208 Maunu Road, Whangarei (Woodhill/Maunu) 0110",
+   "lat": -35.73378919,
+   "lng": 174.3016164,
+   "adv": "100% qualified teachers; small/boutique; central (opposite hospital); long hours; very likely open through summer; recent clean ERO",
+   "concern": "Lunchbox required (not full meals); fees unpublished; only 12 under-2 places (Veli tight); no Facebook",
+   "action": "Replied 21 Jun: has space; 5yo + peers answered. At tour confirm: Christmas/summer dates; fees (under-3 + 3+); earliest start for Veli (14 Sep).",
+   "inreg": "Yes",
+   "cap": "60 (up to 12 under-2)",
+   "ratios": "100% qualified-teacher funded (strength); manager + head + 6 qualified",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Dedicated outdoor area; gardening space",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "'Home from home' family feel and 80%+ recommend; rating a touch lower than the boutique centres but no specific complaints surfaced.",
+   "rep_good": [
+    "Responsive, respectful relationships; 'home from home' (ERO)",
+    "Children well settled, developed sense of belonging",
+    "80%+ families recommend"
+   ],
+   "rep_bad": [
+    "4.4 (11) sits a little below the small boutique centres (no negative text found)"
+   ]
+  },
+  {
+   "id": "MokopunaTarewa",
+   "n": "Mokopuna Early Childhood Education and Care Centre (ki Tarewa)",
+   "suburb": "Tarewa",
+   "type": "Reo Rua (bilingual)",
+   "os": "ask",
+   "sdates": "Not published; short 9-3 hours; may follow term-style calendar",
+   "avail": "Limited availability / enquire",
+   "ages": "all ages (under-2 to 5)",
+   "a2": "Yes (up to 20 under-2)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Reo Rua bilingual immersion: te reo Maori 51%+ as the language of instruction; kaupapa Maori (He Puna Marama Trust); highest immersion of the centre-based options",
+   "hours": "~9:00am-3:00pm core (confirm)",
+   "feesu3": "Unpublished",
+   "fees3": "Unpublished; 20 Hours + extra 10 free (30 total) full-time 3+",
+   "h20": "Yes 3+ (plus extra 10 hours); not for 2yo",
+   "ero": "Requires further development: improve curriculum, health & safety, governance; closer monitoring (recent; weakest of centre-based)",
+   "google": "5.0 (1)",
+   "ph": "09 438 7980",
+   "em": "NF",
+   "web": "NF (Yellow/Education Counts listings)",
+   "addr": "78 Tarewa Road, Tarewa/Morningside, Whangarei 0110",
+   "lat": -35.73433754,
+   "lng": 174.31302524,
+   "adv": "Genuine te reo Maori bilingual immersion (if desired); extra 10 free hours (30 total) for 3+; central",
+   "concern": "Weakest ERO (health/safety, curriculum, governance); short hours (9-3) poor fit for working parents; immersion barrier if family does not speak te reo; summer status unknown",
+   "action": "Confirm whether open over summer (unknown); confirm hours; gauge immersion level for a non-reo family; ask about the ERO findings",
+   "inreg": "Yes",
+   "cap": "70 (up to 20 under-2)",
+   "ratios": "4 registered (pouako) + 3 unqualified; not 100% certificated",
+   "langs": "Te Reo Maori (51%+) and English - bilingual immersion",
+   "outdoor": "NF",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Mixed signals",
+   "rep_overall": "Valued bilingual (reo rua) setting with respectful care, but an older ERO flagged real development needs.",
+   "rep_good": [
+    "Strong bilingual te reo Maori (reo rua) environment",
+    "Positive guidance, respectful care (ERO 2013)"
+   ],
+   "rep_bad": [
+    "ERO 2013: 'requires further development' - curriculum, health & safety, governance (older report; verify current status)"
+   ]
+  },
+  {
+   "id": "MairtownKindy",
+   "n": "Mairtown Kindergarten",
+   "suburb": "Mairtown",
+   "type": "Kindergarten",
+   "os": "open",
+   "sdates": "48-week year; Christmas close ~19 Dec 2026-6 Jan 2027; mid-year week 13-17 Jul",
+   "avail": "Not stated, ask",
+   "ages": "2-5",
+   "a2": "Yes (free from age 2)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "Enviroschools / nature-based: long-running named 'Nature Programme' (10+ years immersed in the local bush and awa at Maunga Parihaka); NKA play-based; strong sustainability and te ao Maori",
+   "hours": "Mon-Fri 8:30am-2:30pm; choose days",
+   "feesu3": "FEES FREE",
+   "fees3": "FEES FREE (20 Hours)",
+   "h20": "Yes 3-5; free for 2yo too",
+   "ero": "Very well placed (10 Sep 2015): high-quality ECE, strong leadership, co-constructed learning (dated)",
+   "google": "none (Yellow widget shows 5 stars)",
+   "ph": "09 437 2742",
+   "em": "mairtown@nka.org.nz",
+   "web": "https://nka.org.nz/kindergartens/mairtown-kindergarten",
+   "addr": "21 Princes Street, Mairtown, Whangarei 0110",
+   "lat": -35.70637172,
+   "lng": 174.32298917,
+   "adv": "Established, well-regarded nature/Enviroschools programme; spacious; free incl 2yo; open most of summer",
+   "concern": "ERO old (2015); 6h day may not cover a full workday; over-2 only (no infant room, but 2yo OK)",
+   "action": "Confirm 2yo + 5yo places same days; confirm Christmas dates; check the 6h day suits",
+   "inreg": "Yes",
+   "cap": "40 (0 under-2)",
+   "ratios": "100% qualified; 1:10",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Spacious grassed area; established nature/Enviroschools programme",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly regarded",
+   "rep_overall": "Small, community-owned kindy with a strong nature-based, whanau-centred reputation; 80%+ recommend.",
+   "rep_good": [
+    "80%+ families recommend",
+    "Nature-based play; learning through play",
+    "Strong whanaungatanga; whanau in planning",
+    "Community-owned (parent say)"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "OnerahiKindy",
+   "n": "Onerahi Kindergarten",
+   "suburb": "Onerahi",
+   "type": "Kindergarten",
+   "os": "open",
+   "sdates": "48-week year; Christmas close ~19 Dec 2026-6 Jan 2027",
+   "avail": "Waitlist - start est. after joining; checking Saima (5) (reply 22 Jun)",
+   "ages": "2-5 (page foregrounds 3-5)",
+   "a2": "Yes per NKA policy (confirm 2yo place; page emphasises 3-5)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "Enviroschools / sustainability-focused (vegetable gardens, worm farm, composting, recycling); NKA play-based Te Whariki; strong school-transition links",
+   "hours": "Mon-Fri 8:30am-2:30pm; choose days",
+   "feesu3": "FEES FREE",
+   "fees3": "FEES FREE (20/'30 hours free' 3-5)",
+   "h20": "Yes 3-5; free for 2yo per NKA (confirm)",
+   "ero": "Very well placed (28 May 2018): children lead the programme as confident learners; spacious well-resourced",
+   "google": "4.3 (3)",
+   "ph": "09 436 1688",
+   "em": "onerahi@nka.org.nz",
+   "web": "https://nka.org.nz/kindergartens/onerahi-kindergarten",
+   "addr": "6 Bayswater Place, Onerahi, Whangarei 0110",
+   "lat": -35.75174526,
+   "lng": 174.37148438,
+   "adv": "Strong ERO (very well placed); excellent school-transition links; seaside/natural; free incl 2yo",
+   "concern": "Onerahi peninsula (longer commute from west/central); page leans 3-5 so confirm 2yo place; 6h day",
+   "action": "Complete & return waitlist form; answer area Q; await Saima (5) confirmation; ask Veli (2) place + Christmas dates.",
+   "inreg": "Yes",
+   "cap": "40 (0 under-2)",
+   "ratios": "4 registered teachers; 1:10",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Seaside; gardens, worm farm, composting",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "Distinctive nature-kindergarten with a much-loved mini farm; a notch lower on Google (tiny sample).",
+   "rep_good": [
+    "Nature programme into Waimahanga bush reserve",
+    "On-site mini farm (goat, chickens, ducks)",
+    "Confident, enthusiastic learners; well-resourced (ERO)"
+   ],
+   "rep_bad": [
+    "Google 4.3 (3) - slightly below the other kindys (small sample)"
+   ]
+  },
+  {
+   "id": "TeTimatatanga",
+   "n": "Te Timatatanga o te Matauranga",
+   "suburb": "Otangarei",
+   "type": "Kindergarten",
+   "os": "open",
+   "sdates": "48-week year; Christmas close ~19 Dec 2026-6 Jan 2027; its week-closure 31 Aug-4 Sep",
+   "avail": "Not stated, ask",
+   "ages": "2-5",
+   "a2": "Yes (free from age 2)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Bilingual / Maori-immersion-leaning NKA kindergarten; te reo Maori revitalisation kaupapa; strong tikanga; Te Tiriti kaupapa",
+   "hours": "Mon-Fri 8:30am-2:30pm; choose days",
+   "feesu3": "FEES FREE + meals (parakuihi/breakfast, morning tea, lunch)",
+   "fees3": "FEES FREE ('30 free hours')",
+   "h20": "Yes 3-5; free for 2yo too",
+   "ero": "Well placed (2014, very dated): bicultural teaching, strong belonging; strengthen children-as-capable-learners",
+   "google": "5.0 (3)",
+   "ph": "09 437 2515",
+   "em": "tetimatatanga@nka.org.nz",
+   "web": "https://nka.org.nz/kindergartens/te-timatatanga-o-te-matauranga",
+   "addr": "189 William Jones Drive, Otangarei, Whangarei 0112",
+   "lat": -35.69519677,
+   "lng": 174.32118547,
+   "adv": "Te reo/tikanga immersion; all meals free; strongly whanau-oriented; free incl 2yo; open most of summer",
+   "concern": "Immersion/bilingual may not suit a relocating non-reo family for a short stay; ERO very dated (2014); 6h day",
+   "action": "Gauge immersion level for a non-reo family; confirm 2yo + 5yo places same days; confirm Christmas dates",
+   "inreg": "Yes",
+   "cap": "30 (0 under-2)",
+   "ratios": "100% qualified; 1:10",
+   "langs": "Te Reo Maori + English (bilingual/immersion-leaning)",
+   "outdoor": "Otangarei community setting",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "Well-established bicultural kindergarten beside Otangarei Primary, strong on te reo and community support.",
+   "rep_good": [
+    "Positive relationships, strong belonging, bicultural strengths (ERO)",
+    "Equity-funded hot lunches + healthy snacks",
+    "Experienced qualified kaiako"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "ManaiaViewKindy",
+   "n": "Manaia View Kindergarten",
+   "suburb": "Raumanga",
+   "type": "Kindergarten",
+   "os": "open",
+   "sdates": "48-week year; Christmas close ~19 Dec 2026-6 Jan 2027",
+   "avail": "Not stated, ask",
+   "ages": "2-5",
+   "a2": "Yes (free from age 2)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Enviroschools member (modest); otherwise standard NKA play-based Te Whariki; relaxed home-like; wellbeing initiatives (KidsCan, hot lunches, toothbrushing); transition-to-school links",
+   "hours": "Mon-Fri 8:45am-2:45pm; choose days",
+   "feesu3": "FEES FREE + free lunch (KidsCan)",
+   "fees3": "FEES FREE (20 Hours)",
+   "h20": "Yes 3-5; free for 2yo too",
+   "ero": "Well placed (8 Feb 2017): on Manaia View School grounds; Te Whariki/Te Tiriti; valued whanau partnerships",
+   "google": "5.0 (1)",
+   "ph": "09 438 2565",
+   "em": "ManaiaView@nka.org.nz",
+   "web": "https://nka.org.nz/kindergartens/manaia-view-kindergarten",
+   "addr": "64 Murdoch Crescent, Whangarei (Raumanga/Otaika edge) 0110",
+   "lat": -35.74578223,
+   "lng": 174.302635,
+   "adv": "Free lunches + wraparound wellbeing supports; co-located with a primary school (transition); home-like; free incl 2yo",
+   "concern": "ERO 2017 (older); Raumanga/Otaika edge location; 6h day",
+   "action": "Confirm 2yo + 5yo places same days; confirm Christmas dates; confirm exact suburb is in-scope (Raumanga vs Otaika edge)",
+   "inreg": "Yes",
+   "cap": "30 (0 under-2)",
+   "ratios": "100% qualified; 1:10",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Co-located with primary school; home-like feel",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly regarded",
+   "rep_overall": "Strong, affirming ERO history in the grounds of Manaia View School; 2019 'very well placed'.",
+   "rep_good": [
+    "'children receive attention, affirmation and aroha' (ERO)",
+    "Tuakana/teina leadership across ages",
+    "2019 ERO 'very well placed to promote positive outcomes'"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "RaumangaKindy",
+   "n": "Raumanga Kindergarten",
+   "suburb": "Raumanga",
+   "type": "Kindergarten",
+   "os": "open",
+   "sdates": "48-week year; Christmas close ~19 Dec 2026-6 Jan 2027",
+   "avail": "No guarantee Sep; will keep in touch; no under-3s now (youngest 3) (reply 22 Jun)",
+   "ages": "2-5 (explicitly welcomes 2yo)",
+   "a2": "Yes (explicitly, free from age 2)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "Nature / bush (ngahere) programme (weekly firepit and ngahere visits, kauri scholarship) plus strong Te Ao Maori / kaupapa Maori (approx 90% Maori roll); NKA play-based; not a badged Enviroschools",
+   "hours": "Mon-Fri 8:30am-2:30pm; choose days",
+   "feesu3": "FEES FREE + KidsCan free meals",
+   "fees3": "FEES FREE (20 Hours)",
+   "h20": "Yes 3-5; free for 2yo too",
+   "ero": "Very well placed (10 Sep 2015): high-quality teaching, confident investigators, strong bicultural practice (dated)",
+   "google": "5.0 (4)",
+   "ph": "09 438 1694",
+   "em": "raumanga@nka.org.nz",
+   "web": "https://nka.org.nz/kindergartens/raumanga-kindergarten",
+   "addr": "13A Murdoch Crescent, Raumanga, Whangarei 0110",
+   "lat": -35.74424185,
+   "lng": 174.30382646,
+   "adv": "Explicitly welcomes 2yos (free); free meals; strong bicultural/multicultural community; open most of summer",
+   "concern": "ERO old (2015); 6h day may not cover a full workday; over-2 only",
+   "action": "Ask if they would take Veli at 2 (youngest now 3); ask to keep us posted + Christmas dates. No firm Sep offer.",
+   "inreg": "Yes",
+   "cap": "30 (0 under-2)",
+   "ratios": "4 kaiako; 100% qualified; 1:10; weekly speech-language groups",
+   "langs": "English + Te Reo Maori (strong bicultural)",
+   "outdoor": "Nature-based; weekly firepit; ngahere visits",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly regarded",
+   "rep_overall": "Family atmosphere, good communication and a strong te reo/tikanga focus; sustained positive ERO.",
+   "rep_good": [
+    "Parents appreciate the family atmosphere, communication and whanau support",
+    "Warm, welcoming, settled (ERO, sustained over time)",
+    "Strong te reo + tikanga; four qualified teachers"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "ParihakaKindy",
+   "n": "Parihaka Kindergarten",
+   "suburb": "Riverside",
+   "type": "Kindergarten",
+   "os": "open",
+   "sdates": "48-week year; Christmas close ~19 Dec 2026-6 Jan 2027",
+   "avail": "Poor fit - Saima maybe Oct; Veli unlikely same time; waitlist only (reply 22 Jun)",
+   "ages": "2-5",
+   "a2": "Yes (free from age 2)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "Enviroschools member plus place-based maunga (Maunga Parihaka) identity; risk / resilience outdoor focus; NKA play-based; whanaungatanga",
+   "hours": "Mon-Fri; split roll: 10 children 8:30am-12:30pm, rest to 2:30pm (built-in shorter-day option)",
+   "feesu3": "FEES FREE",
+   "fees3": "FEES FREE (20 Hours)",
+   "h20": "Yes 3-5; free for 2yo too",
+   "ero": "Well placed (29 May 2018): largely new team refocused on inclusion; make strategies more visible",
+   "google": "5.0 (3)",
+   "ph": "09 438 9804",
+   "em": "parihaka@nka.org.nz",
+   "web": "https://nka.org.nz/kindergartens/parihaka-kindergarten",
+   "addr": "38 Kohe Street, Parahaki (Riverside), Whangarei 0112",
+   "lat": -35.72609702,
+   "lng": 174.34387984,
+   "adv": "Split roll gives a built-in shorter-day option (good for easing Veli in); spacious natural setting; free incl 2yo",
+   "concern": "2018 ERO noted development areas (then-new team); hillside Riverside location; 6h day",
+   "action": "Mismatch (Saima ~Oct, Veli unlikely). Ask them to flag if a Veli place opens near Saima's. Lower priority.",
+   "inreg": "Yes",
+   "cap": "40 (0 under-2)",
+   "ratios": "100% qualified; 1:10",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Spacious natural Maunga setting (halfway up Mt Parihaka); celebrated 50 years Oct 2025",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Well recommended",
+   "rep_overall": "Established NKA kindy (renamed from Riverside) with strong family recommend rates.",
+   "rep_good": [
+    "80%+ families recommend",
+    "Community-based NKA governance + support",
+    "Roll approx 53"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "FirstAveKindy",
+   "n": "First Ave Hora Hora Kindergarten",
+   "suburb": "The Avenues",
+   "type": "Kindergarten",
+   "os": "open",
+   "sdates": "48-week year; open ~7 Jan-18 Dec; Christmas close ~19 Dec 2026-6 Jan 2027 (~2.5 wks)",
+   "avail": "Partial - Tue & Fri both confirmed, a 3rd day to come before Sep (reply 22 Jun)",
+   "ages": "2-5",
+   "a2": "Yes (free from age 2)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "19",
+   "phil": "Enviroschools member (sustainability); NKA play-based Te Whariki base; strong te reo / te taiao / tikanga; multicultural community",
+   "hours": "Mon-Fri 8:30am-2:30pm (all-day Kindy Day); choose days",
+   "feesu3": "FEES FREE (free from age 2)",
+   "fees3": "FEES FREE (20 Hours)",
+   "h20": "Yes 3-5; AND free for 2yo (NKA funds 2yo places free)",
+   "ero": "Well placed (May 2018, NKA cluster): children settle quickly into a calm inclusive environment",
+   "google": "5.0 (3)",
+   "ph": "09 438 7053",
+   "em": "firstave@nka.org.nz",
+   "web": "https://nka.org.nz/kindergartens/first-ave-hora-hora-kindergaten",
+   "addr": "43A First Avenue, Whangarei (The Avenues) 0110",
+   "lat": -35.72912422,
+   "lng": 174.313153,
+   "adv": "Free incl for 2yo (Veli); central Avenues; calm inclusive multicultural setting; open most of summer",
+   "concern": "Smaller team (4 teachers); roll cap 40; sessional-style 6h day may not cover a full workday; older ERO (2018)",
+   "action": "Complete & return waitlist form (pages 1-2); confirm Veli (2) place + 3rd day; ask exact Christmas dates + any under-3 fee/donation; visit on arrival.",
+   "inreg": "Yes",
+   "cap": "40 (0 under-2)",
+   "ratios": "100% qualified/registered; 1:10",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Central/Avenues site",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly regarded",
+   "rep_overall": "Community kindy where parents are enthusiastic about teacher relationships and inclusion of families.",
+   "rep_good": [
+    "Parents enthusiastic about teacher relationships (ERO)",
+    "Teachers know children well; support independence",
+    "Families warmly welcomed and included",
+    "Four qualified/registered teachers"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "KohangaRaurimu",
+   "n": "Te Kohanga Reo o Raurimu",
+   "suburb": "Onerahi",
+   "type": "Kohanga reo",
+   "os": "closed",
+   "sdates": "Follows school terms; closed ~mid-Dec to late-Jan",
+   "avail": "Small roll (~18), space may exist - verify",
+   "ages": "0-5",
+   "a2": "Yes (under-2 may attend)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Te Kohanga Reo: total te reo Maori immersion; kaupapa Maori; whanau and kaumatua-led (Te Kohanga Reo National Trust)",
+   "hours": "Weekdays, school terms (exact NF)",
+   "feesu3": "Koha",
+   "fees3": "Koha; 20 Hours 3+",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "ERO Maori-medium framework (institution 11531; 'next review in three years'); no numeric rating",
+   "google": "none",
+   "ph": "09 436 2704",
+   "em": "NF",
+   "web": "NF",
+   "addr": "36 Raurimu Avenue, Onerahi, Whangarei 0110",
+   "lat": -35.76383808,
+   "lng": 174.36295958,
+   "adv": "Small intimate roll; in Onerahi (a target suburb); takes under-2 and 5yo",
+   "concern": "Few under-2 places; immersion/participation fit; CLOSED over summer; hours NF",
+   "action": "Gauge immersion/whanau expectation; confirm summer closure, hours, 2yo/5yo places",
+   "inreg": "Yes",
+   "cap": "27 (up to 8 under-2)",
+   "ratios": "Kaiako; small roll (~18)",
+   "langs": "Te Reo Maori (full immersion)",
+   "outdoor": "NF",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Little feedback",
+   "rep_overall": "Full-immersion kohanga; no online reviews surfaced.",
+   "rep_good": [
+    "Full te reo immersion + tikanga; whanau participation model"
+   ],
+   "rep_bad": [
+    "No public reviews found"
+   ]
+  },
+  {
+   "id": "KohangaTeReo",
+   "n": "Te Kohanga Reo o Te Reo",
+   "suburb": "Otangarei",
+   "type": "Kohanga reo",
+   "os": "closed",
+   "sdates": "Follows school terms; closed ~mid-Dec to late-Jan",
+   "avail": "Not stated, ask",
+   "ages": "0-5",
+   "a2": "Yes (up to 5 under-2)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Te Kohanga Reo: total te reo Maori immersion 'language nest'; kaupapa Maori; whanau-led (movement-level philosophy; no centre-specific statement located)",
+   "hours": "Weekdays, school terms (exact NF)",
+   "feesu3": "Koha",
+   "fees3": "Koha; 20 Hours 3+",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "ERO Maori-medium framework (institution 11535); no numeric rating; date NF",
+   "google": "5.0 (2)",
+   "ph": "09 437 1579",
+   "em": "NF",
+   "web": "NF",
+   "addr": "31 Taraire Crescent, Otangarei, Whangarei 0112",
+   "lat": -35.69291126,
+   "lng": 174.31730122,
+   "adv": "In Otangarei (a target suburb); small/intimate",
+   "concern": "Only 5 under-2 places (tight for Veli); immersion/participation fit; CLOSED over summer; minimal online presence",
+   "action": "Gauge immersion/whanau expectation; confirm summer closure, hours, under-2 place",
+   "inreg": "Yes",
+   "cap": "18 (up to 5 under-2)",
+   "ratios": "Kaiako; small",
+   "langs": "Te Reo Maori (full immersion)",
+   "outdoor": "NF",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Whanau-centred",
+   "rep_overall": "Full-immersion kohanga with positive whanau engagement; thin public reviews.",
+   "rep_good": [
+    "Full te reo immersion + tikanga",
+    "Whanau participation model"
+   ],
+   "rep_bad": [
+    "Thin public reviews; school-term only"
+   ]
+  },
+  {
+   "id": "KohangaRaumanga",
+   "n": "Te Kohanga Reo o Raumanga Kohungahunga",
+   "suburb": "Raumanga",
+   "type": "Kohanga reo",
+   "os": "closed",
+   "sdates": "Follows school terms; closed ~mid-Dec 2026 to late-Jan 2027",
+   "avail": "Not stated, ask",
+   "ages": "0-5",
+   "a2": "Yes (dedicated under-2 whare; up to 16 under-2)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Te Kohanga Reo: full te reo Maori immersion; kaupapa Maori; whanau-led / community-based (est. 1983, on NorthTec grounds)",
+   "hours": "Standard kohanga day, weekdays during school terms (exact NF)",
+   "feesu3": "Koha-based",
+   "fees3": "Koha; 20 Hours 3+",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "ERO Maori-medium framework (institution 11525; report ref ~3 Jun 2022); no numeric/star rating",
+   "google": "5.0 (2)",
+   "ph": "09 435 9090 (TKR district office)",
+   "em": "NF",
+   "web": "NF",
+   "addr": "45 Raumanga Valley Road, Raumanga (NorthTec campus), Whangarei 0110",
+   "lat": -35.74044708,
+   "lng": 174.3039081,
+   "adv": "Largest/most established kohanga; dedicated under-2 whare (good for Veli); on NorthTec campus (handy if a parent studies there); 20 Hours",
+   "concern": "Full te reo immersion + whanau-participation expectation may not suit a non-reo working family wanting drop-off; CLOSED over summer; exact hours NF",
+   "action": "Gauge immersion + whanau-attendance expectation for a non-reo family; confirm summer closure; confirm hours and 2yo/5yo places",
+   "inreg": "Yes",
+   "cap": "52 (up to 16 under-2); largest/most established kohanga (est 1983)",
+   "ratios": "Kaiako; small-group whanau model",
+   "langs": "Te Reo Maori (full immersion)",
+   "outdoor": "On NorthTec/Te Pukenga campus",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Whanau-centred",
+   "rep_overall": "Full Maori immersion with strong whanaungatanga; thin mainstream-review presence (kohanga are not star-rated by ERO).",
+   "rep_good": [
+    "Strong whanaungatanga; whanau run operations (ERO)",
+    "Two whare (under-2 + over-2)"
+   ],
+   "rep_bad": [
+    "School-term only (closed over summer) - a fit issue, not reputation"
+   ]
+  },
+  {
+   "id": "KohangaRewarewa",
+   "n": "Te Kohanga Reo o Rewarewa",
+   "suburb": "Raumanga",
+   "type": "Kohanga reo",
+   "os": "closed",
+   "sdates": "Follows school terms; closed ~mid-Dec to late-Jan",
+   "avail": "Not stated, ask",
+   "ages": "0-5",
+   "a2": "Yes (under-2 may attend)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Te Kohanga Reo: full te reo Maori immersion; kaupapa Maori; kuia-led (founder of 30+ years), whanau-led",
+   "hours": "Weekdays, school terms (exact NF)",
+   "feesu3": "Koha",
+   "fees3": "Koha; 20 Hours likely (confirm)",
+   "h20": "Likely yes 3+; not for 2yo",
+   "ero": "ERO Maori-medium framework (institution 18271); no numeric rating; date NF",
+   "google": "5.0 (1)",
+   "ph": "09 438 9948",
+   "em": "NF",
+   "web": "NF",
+   "addr": "Community House, Smeaton Drive, Raumanga, Whangarei 0110",
+   "lat": -35.75344366,
+   "lng": 174.30831358,
+   "adv": "Long-established kaupapa/leadership; community-owned small boutique; in Raumanga",
+   "concern": "Strong immersion identity may be least drop-off-friendly culturally; very little public info; CLOSED over summer",
+   "action": "Gauge immersion/whanau expectation; confirm 20 Hours, summer closure, hours, 2yo place",
+   "inreg": "Yes",
+   "cap": "23 (up to 10 under-2)",
+   "ratios": "Kaiako; small boutique",
+   "langs": "Te Reo Maori (full immersion)",
+   "outdoor": "NF",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Whanau-centred",
+   "rep_overall": "Long-established (founder kuia 30+ years) with strong community bonds and loyalty.",
+   "rep_good": [
+    "Founder kuia, 30+ years",
+    "Strong community bonds + loyalty (ERO)",
+    "Supports belonging and identity as Maori"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "OnerahiPlaycentre",
+   "n": "Onerahi Playcentre",
+   "suburb": "Onerahi",
+   "type": "Playcentre",
+   "os": "closed",
+   "sdates": "Follows school terms; closed ~mid-Dec to late-Jan",
+   "avail": "Not stated, ask",
+   "ages": "0-6",
+   "a2": "Yes (up to 15 under-2)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Playcentre parent-cooperative model (parents as the first educators, child-led free play); Te Whariki, bicultural; runs 'Space' infant sessions; not immersion",
+   "hours": "Tue 9-12:30; Wed 9:30-12 (Space/infant); Thu 9:30-12 & 12:30-3 (Space); Fri 9-12:30",
+   "feesu3": "Low-cost",
+   "fees3": "Low-cost; 20 Hours",
+   "h20": "Yes",
+   "ero": "ERO narrative (institution 16572; older report 14 Mar 2014); no numeric rating",
+   "google": "5.0 (8)",
+   "ph": "027 880 3894",
+   "em": "keri.squires@playcentre.org.nz",
+   "web": "https://playcentre.org.nz/centre/onerahi/",
+   "addr": "1B Church Street, Onerahi, Whangarei 0110",
+   "lat": -35.7579368,
+   "lng": 174.3680163,
+   "adv": "Largest of the playcentres (cap 30); in Onerahi; dedicated infant 'Space' sessions for Veli; good session spread",
+   "concern": "PARENT MUST ATTEND (not a drop-off); short half-day sessions; CLOSED over summer",
+   "action": "Note: parent-attendance required, so not usable as a 3-4 day drop-off",
+   "inreg": "Yes",
+   "cap": "30 (up to 15 under-2)",
+   "ratios": "Parent-led co-op",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "NF",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "Happy children in a parent-led co-op, though ERO flagged governance/turnover strain typical of small playcentres.",
+   "rep_good": [
+    "Children settled, engaged alongside parents/caregivers (ERO)",
+    "Strong Google (5.0 over 8)"
+   ],
+   "rep_bad": [
+    "ERO: major office-holder turnover, vacant roles, management at a 'very basic level'"
+   ]
+  },
+  {
+   "id": "HorahoraPlaycentre",
+   "n": "Horahora Playcentre",
+   "suburb": "Woodhill",
+   "type": "Playcentre",
+   "os": "closed",
+   "sdates": "Follows Playcentre/school terms; closed ~mid-Dec to late-Jan",
+   "avail": "Low roll (space likely)",
+   "ages": "0-6",
+   "a2": "Yes (up to 15 under-2)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Playcentre parent-cooperative model (parents as the first educators, child-led free play); Te Whariki, bicultural; '16 areas of play'; not immersion",
+   "hours": "Mon, Thu, Fri 9:00am-1:00pm",
+   "feesu3": "Low-cost (Playcentre model)",
+   "fees3": "Low-cost; 20 Hours",
+   "h20": "Yes",
+   "ero": "ERO narrative (institution 16766/46586): strong wellbeing, language-rich; build te ao Maori; next review 3 yrs",
+   "google": "4.7 (6)",
+   "ph": "027 880 5384",
+   "em": "keri.squires@playcentre.org.nz",
+   "web": "https://playcentre.org.nz/centre/hora-hora-2/",
+   "addr": "22 Te Mai Road, Horahora/Woodhill, Whangarei 0110",
+   "lat": -35.73638971,
+   "lng": 174.30824296,
+   "adv": "Small warm whanau feel; affordable",
+   "concern": "PARENT MUST ATTEND every session (not a drop-off); only 3 days, mornings only; CLOSED over summer",
+   "action": "Note: parent-attendance required, so not usable as a 3-4 day drop-off; would only suit if a parent attends",
+   "inreg": "Yes",
+   "cap": "19 (up to 15 under-2)",
+   "ratios": "Parent-led co-op",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Spacious environment",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly regarded",
+   "rep_overall": "Strong child wellbeing and a creative, well-resourced environment (for a parent-led playcentre).",
+   "rep_good": [
+    "Strong wellbeing + pride; friendships (ERO)",
+    "Creative, spacious indoor space; good outdoor play"
+   ],
+   "rep_bad": [
+    "Parent-attended co-op, school-term only (model/fit, not a reputation issue)"
+   ]
+  },
+  {
+   "id": "TheVillage",
+   "n": "The Village Home-Based Educators Limited",
+   "suburb": "Morningside",
+   "type": "Home-based",
+   "os": "ask",
+   "sdates": "No fixed closure; arranged with the individual educator",
+   "avail": "Recruiting educators; capacity growing but may be limited",
+   "ages": "6 weeks to school start (infants/toddlers/preschool together)",
+   "a2": "Yes (max 4 children, max 2 under-2 per educator)",
+   "a5": "Yes ('does not have to leave when they turn 5')",
+   "contacted": "",
+   "count4": "",
+   "phil": "Self-defined three-pillar approach (meaningful relationships plus nature / Te Taiao plus purposeful play), no externally named pedagogy; home-based; guided by Te Whariki",
+   "hours": "Start/finish to suit (educator-set)",
+   "feesu3": "Educator-set (~$9/hr guide)",
+   "fees3": "20 Hours ($6/hr) for 3+; WINZ provider; FamilyBoost invoices",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "No published ERO report yet (new ~2024-2025; reviewed within ~2 yrs of licensing)",
+   "google": "none",
+   "ph": "NF (enquiry form only)",
+   "em": "home@thevillagehomebased.com",
+   "web": "https://thevillagehomebased.com",
+   "addr": "Coordinator: 82 McCullough Road, Mangapai (care in educators' homes; one educator in Morningside)",
+   "lat": -35.84399545,
+   "lng": 174.30579614,
+   "adv": "Most transparent public info (named educators, fees, funding); explicitly welcomes keeping a 5yo; one educator in Morningside (in-scope)",
+   "concern": "No ERO report yet; most educators rural/outside the 16 suburbs (Morningside the main in-city one); no phone (enquiry form only)",
+   "action": "Ask if a Morningside (or other in-scope) educator can take a 2yo + 5yo 3-4 days THROUGH summer; note no ERO yet",
+   "inreg": "Yes",
+   "cap": "50 places (network); 1 educator : max 4 (max 2 under-2)",
+   "ratios": "1 educator : max 4 (max 2 under-2)",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Educator's home + nature focus",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Little feedback",
+   "rep_overall": "A small, experienced home-based team with a strong stated philosophy, but no public reviews online.",
+   "rep_good": [
+    "Small qualified, registered team (60+ years combined)",
+    "Max 4 tamariki; nature + relationship-led philosophy"
+   ],
+   "rep_bad": [
+    "No public reviews found"
+   ]
+  },
+  {
+   "id": "AhiKa",
+   "n": "AhiKa Home Based Childcare",
+   "suburb": "Whau Valley",
+   "type": "Home-based",
+   "os": "ask",
+   "sdates": "No fixed closure; set by the individual educator; Mon-Sat year-round hours suggest availability",
+   "avail": "Not stated, ask",
+   "ages": "newborn to pre-school (infants + over-2s together with one educator)",
+   "a2": "Yes (home-based takes under-2s and 2yos)",
+   "a5": "Yes (funding to day before 6th birthday)",
+   "contacted": "",
+   "count4": "",
+   "phil": "Te ao Maori / bicultural identity (AhiKa, 'keeping the home fires burning'); home-based; Te Whariki play-based; charitable / community",
+   "hours": "Listed Mon-Sat 6am-9pm (broad/flexible)",
+   "feesu3": "Educator-set hourly (~$9/hr before subsidy)",
+   "fees3": "20 Hours 3+ passed to educator",
+   "h20": "Yes 3+; not for 2yo (WINZ may apply under-3)",
+   "ero": "Well placed (07 Jun 2018; first review, at the Far North base); te ao Maori focus",
+   "google": "5.0 (1)",
+   "ph": "021 833 736",
+   "em": "ann.ahikavt@outlook.com",
+   "web": "https://ahikachildcare.co.nz",
+   "addr": "Coordinator: 45A Whau Valley Road, Whau Valley, Whangarei 0110 (care in educators' homes)",
+   "lat": -35.69754378,
+   "lng": 174.30901921,
+   "adv": "Coordinator in Whau Valley (a target suburb); keeps two siblings (incl an under-2) with ONE educator; very broad hours; charitable/community",
+   "concern": "Network is geographically huge (Warkworth-Far North) and small; an educator with two free slots incl an under-2 in a target suburb may be limited; ERO dated (2018)",
+   "action": "Ask if one educator can take a 2yo + 5yo in a target suburb 3-4 days/week THROUGH the mid-Dec to late-Jan period; request fees",
+   "inreg": "Yes",
+   "cap": "80 places network (up to 35 under-2); 1 educator : max 4 children (max 2 under-2)",
+   "ratios": "1 educator : max 4 children (max 2 under-2)",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Educator's home + outings",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "Whanau-centred home-based network (charitable trust) covering Whangarei to the Far North; 80%+ recommend.",
+   "rep_good": [
+    "80%+ families recommend",
+    "Whanaungatanga a strength (ERO); strong communication",
+    "Offers 20 Hours"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "Back2Nature",
+   "n": "Back2Nature - Koru",
+   "suburb": "Whau Valley",
+   "type": "Home-based",
+   "os": "ask",
+   "sdates": "No fixed closure; '7 days depending on educator' implies year-round potential",
+   "avail": "Depends on educator spaces",
+   "ages": "all ages (infants + over-2s together)",
+   "a2": "Yes",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "Nature-based / environmental pedagogy as the core identity (child-as-koru metaphor, children learn best outdoors); home-based; weekly playgroup; te reo Maori",
+   "hours": "7 days, depending on educator (flexible)",
+   "feesu3": "Educator-set hourly",
+   "fees3": "20 Hours 3+",
+   "h20": "Yes 3+; not for 2yo (WINZ may apply)",
+   "ero": "Akarangi 20 Jan 2023: 'Establishing/Emerging' (lower-middle of current rubric); prior 2021 'Well placed'. Strong under-2 relationships, nature programme",
+   "google": "5.0 (6)",
+   "ph": "021 212 8387",
+   "em": "office@back2naturechildcare.co.nz",
+   "web": "https://back2naturechildcare.co.nz",
+   "addr": "Coordinator: 31 Ogle Crescent, Kamo / 52 Denby Crescent, Tikipunga (care in educators' homes; serves city incl Raumanga)",
+   "lat": -35.68509265,
+   "lng": 174.32232662,
+   "adv": "Established; two networks (Koru + Puawai) = more capacity; strong under-2 practice and nature programme; coordinator near the area",
+   "concern": "2023 ERO 'Establishing/Emerging' softer than its 2021 'Well placed'; coordinator just outside the 16 suburbs; securing one educator for both ages needs checking",
+   "action": "Read the 2023 ERO report; ask if one educator can take a 2yo + 5yo in a target suburb 3-4 days THROUGH summer; request fees",
+   "inreg": "Yes",
+   "cap": "80 places (up to 40 under-2); 1 educator : max 4 (max 2 under-2)",
+   "ratios": "1 educator : max 4 (max 2 under-2)",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Strong nature/outdoor programme (parks/beaches/forests)",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly regarded",
+   "rep_overall": "Nature-focused home-based network with strong mentoring relationships and a loyal following.",
+   "rep_good": [
+    "Responsive, respectful relationships a strength (ERO)",
+    "Emotional wellbeing + belonging in familiar home settings",
+    "Nature-centred philosophy"
+   ],
+   "rep_bad": []
+  },
+  {
+   "id": "SimplyKids",
+   "n": "Simply Kids Preschool",
+   "suburb": "Onerahi",
+   "type": "Education & care",
+   "os": "ask",
+   "sdates": "NF",
+   "avail": "VERIFY - Google says permanently closed",
+   "ages": "preschool (licensed 28)",
+   "a2": "Confirm",
+   "a5": "Yes (confirm)",
+   "contacted": "",
+   "count4": "",
+   "phil": "No distinctive named philosophy (standard Te Whariki play-based); emergent curriculum; outdoor / mini-farm and multicultural emphasis; low online presence",
+   "hours": "NF",
+   "feesu3": "Unpublished",
+   "fees3": "Unpublished; 20 Hours 3+",
+   "h20": "Confirm",
+   "ero": "NF (older record exists; verify status)",
+   "google": "5.0 (3) [Google marks permanently closed]",
+   "ph": "NF",
+   "em": "NF",
+   "web": "NF",
+   "addr": "60 Waverley Street, Onerahi, Whangarei 0110 (ERO older record: 45 Waverley St)",
+   "lat": -35.755,
+   "lng": 174.367,
+   "adv": "In-scope Onerahi option (if still operating)",
+   "concern": "Google marks PERMANENTLY CLOSED while directories still list it - status must be confirmed before pursuing",
+   "action": "FIRST verify whether it is still open; if open, gather full detail; if closed, drop",
+   "inreg": "No - not in current licensed register",
+   "cap": "28",
+   "ratios": "NF",
+   "langs": "English",
+   "outdoor": "NF",
+   "accepts2": "confirm",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Verify status",
+   "rep_overall": "Positive history (since 2001, nature setting) yet conflicting open/closed signals online - verify before relying on it.",
+   "rep_good": [
+    "Established 20+ years; close to reserves, nature-surrounded",
+    "ERO standards met (2016, 2021)"
+   ],
+   "rep_bad": [
+    "Conflicting 'permanently closed' Google marker vs active listings - verify"
+   ]
+  },
+  {
+   "id": "GeckosNest",
+   "n": "Geckos (The Nest) Early Learning Centre",
+   "suburb": "Regent",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "NF (Geckos group: stat holidays only)",
+   "avail": "Not stated, ask",
+   "ages": "3 months to ~3.5 years",
+   "a2": "Yes (under-2 and 2yo)",
+   "a5": "No (younger-age site)",
+   "contacted": "",
+   "count4": "",
+   "phil": "Reggio Emilia-inspired (Geckos brand association; no Nest-specific statement located); Te Whariki",
+   "hours": "NF (confirm)",
+   "feesu3": "Unpublished",
+   "fees3": "n/a (younger site)",
+   "h20": "Likely no (younger-age site)",
+   "ero": "ERO institution 11566 (relicensed Jun 2018); rating NF",
+   "google": "none (no standalone listing)",
+   "ph": "NF",
+   "em": "info@geckos.net.nz (Geckos group; The Nest not listed on current site)",
+   "web": "https://geckoschildcare.co.nz",
+   "addr": "~2 Shortland Street, Regent, Whangarei 0112",
+   "lat": -35.7155,
+   "lng": 174.3235,
+   "adv": "Another Geckos-group option for the younger child in Regent",
+   "concern": "Younger-age site (to ~3.5y) so does not suit Saima (5); separate from the 2-school Geckos site",
+   "action": "Confirm exact address, ages, hours; likely only relevant for Veli; confirm Christmas dates",
+   "inreg": "No - not in current licensed register",
+   "cap": "28 (up to 8 under-2)",
+   "ratios": "Small licence (28); qualified teachers",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "NF",
+   "accepts2": "yes",
+   "accepts5": "no",
+   "viable": false,
+   "rep": "Little feedback",
+   "rep_overall": "Part of the well-regarded Geckos group, but no standalone reviews surfaced; register/licensing status worth verifying.",
+   "rep_good": [
+    "Part of the Geckos group (which is warmly reviewed)",
+    "Offers 20 Hours"
+   ],
+   "rep_bad": [
+    "No standalone reviews found",
+    "Register status to verify"
+   ]
+  },
+  {
+   "id": "MokopunaWhauValley",
+   "n": "Mokopuna ki Whau Valley Early Childhood Service",
+   "suburb": "Whau Valley",
+   "type": "Education & care",
+   "os": "ask",
+   "sdates": "NF",
+   "avail": "Not stated, ask",
+   "ages": "2+",
+   "a2": "Yes (ages 2+)",
+   "a5": "Yes (confirm)",
+   "contacted": "",
+   "count4": "",
+   "phil": "Kaupapa Maori bilingual (ERO classes it a Maori ECE service); learning in a bilingual environment; te ao Maori, success as Maori (He Puna Marama Trust); confirm exact immersion level",
+   "hours": "NF",
+   "feesu3": "Unpublished",
+   "fees3": "Unpublished; 20 Hours 3+ (confirm)",
+   "h20": "Confirm",
+   "ero": "ECE 45534 (verify ERO; MokoNZ service)",
+   "google": "none (only combined Whau Valley School/Mokopuna listing)",
+   "ph": "NF",
+   "em": "NF",
+   "web": "NF (MokoNZ)",
+   "addr": "17 Moody Avenue, Whau Valley, Whangarei 0110",
+   "lat": -35.7007,
+   "lng": 174.31645,
+   "adv": "In-scope Whau Valley option on Moody Ave (near Busy Bees and BJ's), confirmed currently operating",
+   "concern": "Thin public info; ages 2+ (verify under-2 for Veli); confirm immersion level, hours, fees, summer",
+   "action": "Verify operating status, ages (under-2?), hours, fees, philosophy/immersion, summer closure; confirm 2yo + 5yo place",
+   "inreg": "No - not in current licensed register",
+   "cap": "NF (verify)",
+   "ratios": "NF",
+   "langs": "English + Te Reo Maori (confirm)",
+   "outdoor": "NF",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Development needs",
+   "rep_overall": "Culturally responsive kaupapa (te ao Maori), but ERO flagged health & safety and governance to improve; register status to verify.",
+   "rep_good": [
+    "Emphasis on te ao Maori; culturally responsive practice",
+    "Trust-governed (He Puna Marama); 3 registered teachers"
+   ],
+   "rep_bad": [
+    "ERO: 'requires further development ... improve health and safety, and governance systems'",
+    "Register status to verify"
+   ]
+  },
+  {
+   "id": "KohangaArohaOtangarei",
+   "n": "Te Kohanga Reo Aroha o Otangarei",
+   "suburb": "Otangarei",
+   "type": "Kohanga reo",
+   "os": "closed",
+   "sdates": "Follows school terms; closed ~mid-Dec to late-Jan",
+   "avail": "Not stated, ask",
+   "ages": "0-5",
+   "a2": "Yes (confirm under-2)",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Te Kohanga Reo: full te reo Maori immersion; kaupapa Maori; kuia / whanau-led; Ngapuhi / Ngati Hine grounding; beside Otangarei Primary and Te Puawaitanga Hou Marae",
+   "hours": "Weekdays, school terms (exact NF)",
+   "feesu3": "Koha",
+   "fees3": "Koha; 20 Hours 3+",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "ERO Maori-medium framework (institution 18209); no numeric rating; date NF",
+   "google": "none",
+   "ph": "09 437 5250",
+   "em": "NF",
+   "web": "NF",
+   "addr": "William Jones Drive, Otangarei, Whangarei 0112",
+   "lat": -35.6954,
+   "lng": 174.3205,
+   "adv": "In Otangarei (a target suburb); marae-linked total-immersion option",
+   "concern": "Full immersion + whanau expectation; CLOSED over summer; thin public info",
+   "action": "Gauge immersion/whanau expectation; confirm capacity/hours/under-2 place; confirm summer closure",
+   "inreg": "No - not in current licensed register",
+   "cap": "NF (verify)",
+   "ratios": "Kaiako; small-group whanau model",
+   "langs": "Te Reo Maori (full immersion)",
+   "outdoor": "NF",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Whanau-centred",
+   "rep_overall": "Small kuia-led full-immersion kohanga; most children related to the kuia/kaiako. Register status to verify.",
+   "rep_good": [
+    "Kuia is the foundation; Ngapuhi knowledge + te reo",
+    "Immersive language strategies (waiata, repetition, modelling)",
+    "Strong whanau links"
+   ],
+   "rep_bad": [
+    "No public reviews; register status to verify"
+   ]
+  },
+  {
+   "id": "PORSE",
+   "n": "PORSE In-Home Childcare (Whangarei)",
+   "suburb": "Regent",
+   "type": "Home-based",
+   "os": "ask",
+   "sdates": "Educator-dependent (NF)",
+   "avail": "Not stated, ask",
+   "ages": "all ages incl under-2s with over-2s",
+   "a2": "Yes",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "Attachment-based 'home is best' model (national PORSE approach, attachment theory plus early-brain research); home-based plus Nanny Educator models; guided by Te Whariki",
+   "hours": "Educator-dependent (flexible)",
+   "feesu3": "Educator-set (NF)",
+   "fees3": "20 Hours 3+",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "Whangarei branch noted provisional / not yet fully assessed - verify current status",
+   "google": "none",
+   "ph": "09 438 5100",
+   "em": "via porse.co.nz",
+   "web": "https://porse.co.nz",
+   "addr": "Office: 24 Finlayson Street, Whangarei 0110 (care in educators' homes / nanny in your home)",
+   "lat": -35.7273432,
+   "lng": 174.327603,
+   "adv": "Established national network with a Whangarei office; Home Educator model keeps two siblings with one educator",
+   "concern": "Branch ERO status to verify; securing one educator for both ages in a target suburb needs checking",
+   "action": "Ask if a home educator can take a 2yo + 5yo in a target suburb 3-4 days THROUGH summer; confirm branch ERO status; request fees",
+   "inreg": "No - not in current licensed register",
+   "cap": "1 educator : max 4 children",
+   "ratios": "1 educator : max 4 children",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Educator's home + outings",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "National in-home brand; the local network is reviewed positively by ERO and parents.",
+   "rep_good": [
+    "Parents/whanau generally happy (ERO)",
+    "Responsive relationships; parents well informed daily",
+    "Community playschools build social skills"
+   ],
+   "rep_bad": [
+    "Whangarei-specific review signal is thin (mostly brand/network-level)"
+   ]
+  },
+  {
+   "id": "NorthKidz",
+   "n": "North Kidz Homebased Childcare",
+   "suburb": "Whau Valley",
+   "type": "Home-based",
+   "os": "ask",
+   "sdates": "Educator-dependent (NF)",
+   "avail": "Vacancies listed (3 mths-5 yrs) - encouraging",
+   "ages": "3 months - 5 years (infants + over-2s together)",
+   "a2": "Yes",
+   "a5": "Yes",
+   "contacted": "",
+   "count4": "",
+   "phil": "No distinctive named philosophy (standard home-based Te Whariki play-based); coordinators are registered ECE teachers; teacher-led playgroups, literacy and transition-to-school programmes",
+   "hours": "Flexible (home-based)",
+   "feesu3": "Educator-set (NF)",
+   "fees3": "20 Hours 3+ (confirm)",
+   "h20": "Likely yes 3+; not for 2yo",
+   "ero": "Well placed (North Kidz 2, 03 Feb 2021; next review ~3 yrs)",
+   "google": "none",
+   "ph": "09 430 3980",
+   "em": "via contact form",
+   "web": "https://northkidz.co.nz",
+   "addr": "Office: 7 Woods Road, Whangarei (care in educators' homes; serves Whangarei + Dargaville)",
+   "lat": -35.695,
+   "lng": 174.305,
+   "adv": "Whangarei-based; two networks; registered-teacher coordinators; 'Well placed' ERO; shows current vacancies for the full age band",
+   "concern": "Small roll/network; thin online info (no fees, no reviews); confirm an educator can take both ages in an in-scope suburb",
+   "action": "Ask if one educator can take a 2yo + 5yo in a target suburb 3-4 days THROUGH summer; request fees",
+   "inreg": "No - not in current licensed register",
+   "cap": "1 educator : max 4 (max 2 under-2)",
+   "ratios": "1 educator : max 4 (max 2 under-2); registered-teacher coordinators",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Educator's home + outings",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Generally positive",
+   "rep_overall": "Long-running Northland home-based network with warm, ERO-reviewed relationships; no public star reviews.",
+   "rep_good": [
+    "Caring, respectful, sincere relationships (ERO 'Well placed')",
+    "Appreciative family comments; meaningful partnerships"
+   ],
+   "rep_bad": [
+    "No public star reviews"
+   ]
+  },
+  {
+   "id": "ForestViewKindy",
+   "n": "Forest View Kindergarten",
+   "suburb": "Tikipunga (outside the 16-suburb scope; added by request)",
+   "type": "Kindergarten",
+   "os": "open",
+   "sdates": "48-week year; 2026 cycle 7 Jan to 18 Dec; Christmas close ~19 Dec 2026 to ~6 Jan 2027; mid-year week 13-17 Jul 2026",
+   "avail": "Waitlist - unlikely until after arrival; visit on arrival (reply 21 Jun)",
+   "ages": "2-5",
+   "a2": "Yes (free from age 2)",
+   "a5": "Yes",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "Enviroschools / nature-based ('nature-rich' identity: gardens, herbs, native bush near Whangarei Falls); NKA play-based; strong te reo / bicultural (majority Maori)",
+   "hours": "Mon-Fri Morning 8:30am-12:30pm; All Day 8:30am-2:30pm; choose days",
+   "feesu3": "FEES FREE",
+   "fees3": "FEES FREE (20 Hours)",
+   "h20": "Yes 3-5; free for 2yo too",
+   "ero": "Well placed (ERO 14 Dec 2016): warm welcome, strong community/relationships, spacious well-resourced environment, bicultural focus and te reo; next steps assessment and self-review (dated)",
+   "google": "none",
+   "ph": "09 437 2965 (mob 027 755 7761)",
+   "em": "forestview@nka.org.nz",
+   "web": "https://nka.org.nz/kindergartens/forest-view-kindergarten",
+   "addr": "215 Kiripaka Road, Tikipunga, Whangarei 0112",
+   "lat": -35.6842006,
+   "lng": 174.3299202,
+   "adv": "Fees-free incl 2yo; 48-week (open most of summer); nature-rich Enviroschools; strong te reo/bicultural",
+   "concern": "Outside the 16-suburb scope (Tikipunga, ~6 km NE of CBD); ERO old (2016); over-2 only (no infant room, but 2yo OK); 6h all-day may not cover a full workday",
+   "action": "Return pages 1-2 to join waitlist; visit on arrival. Out of scope (Tikipunga).",
+   "inreg": "Yes (outside original 16-suburb scope: Tikipunga)",
+   "cap": "40 (0 under-2)",
+   "ratios": "80%+ qualified; 1:10 over-2 (5 qualified teachers, 2016)",
+   "langs": "English + Te Reo Maori (strong bicultural focus)",
+   "outdoor": "Spacious nature-rich grounds amongst native trees near Whangarei Falls; gardens, trees to climb; Enviroschools",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Quietly positive",
+   "rep_overall": "Strong ERO and a welcoming feel, but essentially no public parent reviews.",
+   "rep_good": [
+    "Children and parents feel welcome and included (ERO)",
+    "Spacious, recently renovated facilities",
+    "Te reo Maori + tikanga embedded"
+   ],
+   "rep_bad": [
+    "No public reviews"
+   ]
+  },
+  {
+   "id": "OpenSpaces",
+   "n": "Open Spaces Preschool",
+   "suburb": "Glenbervie (outside the 16-suburb scope; rural ~10 km NE; added by request)",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Open all year round including school holidays (per centre); confirm exact Christmas/New Year stat-day closure",
+   "avail": "Not stated, ask",
+   "ages": "0-5 (licensed for under-2; separate infant/toddler space)",
+   "a2": "Yes (licensed for under-2; separate infant space)",
+   "a5": "Yes (education & care to school age)",
+   "contacted": "",
+   "count4": "",
+   "phil": "Nature-immersion as the core identity ('Wild Woods' bush programme: native bush, 400-yr trees, Waitangi Stream) plus Enviroschools; Te Whariki; mara kai food gardens",
+   "hours": "Mon-Fri 7:30am-4:30pm (centre site also states 7am-5:30pm); confirm",
+   "feesu3": "Not published, ask",
+   "fees3": "20 Hours ECE offered; fees not published, ask",
+   "h20": "Yes 3+; not for 2yo",
+   "ero": "Meeting (Tutuki nga whakaritenga) - current ERO assurance; relicensed under new ownership Jul 2020; earlier non-compliances since addressed, now taking reasonable steps to meet standards (report date NF)",
+   "google": "4.0 (Google); Facebook 100% recommend (6 reviews)",
+   "ph": "09 437 5718",
+   "em": "info@openspaces.net.nz",
+   "web": "http://www.openspaces.net.nz",
+   "addr": "592 Ngunguru Road, Glenbervie, Whangarei 0173 (some listings 590)",
+   "lat": -35.6570409,
+   "lng": 174.3844349,
+   "adv": "Open all year (strong summer match); exceptional nature/Wild Woods immersion; takes both children incl under-2; active engaged centre",
+   "concern": "Outside scope (Glenbervie, rural ~10 km NE of CBD, a drive); ERO had non-compliances since addressed after 2020 relicensing; fees unpublished",
+   "action": "Confirm both children's places same days from Sep 2026; fees (under-3 and 3+); exact summer/stat-day closures; the commute from town",
+   "inreg": "Yes (outside original 16-suburb scope: Glenbervie)",
+   "cap": "30 (up to 8 under-2)",
+   "ratios": "NF (owner-led; team leaders + teachers across two age-based spaces)",
+   "langs": "English + Te Reo Maori (te reo woven through; Te Whariki)",
+   "outdoor": "Exceptional: Wild Woods native bush on family-trust farm (400-yr-old trees), stream, mara kai gardens; nature immersion unique in Northland",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Distinctively loved",
+   "rep_overall": "A one-of-a-kind nature-immersion preschool on 100 acres ('Wild Woods'), adored by its families but rural and a notch lower on Google.",
+   "rep_good": [
+    "'there is nothing else like it in Whangarei' (100-acre Wild Woods)",
+    "Facebook 100% recommend (6 reviews)",
+    "Confident, curious explorers; good parent communication (ERO)"
+   ],
+   "rep_bad": [
+    "Google 4.0 - below the boutique-centre pack",
+    "Rural, well outside town (Glenbervie)"
+   ]
+  },
+  {
+   "id": "BestStartPipiwaiRoad",
+   "n": "BestStart Pipiwai Road",
+   "suburb": "Te Kamo / Kamo (outside the 16-suburb scope; ~5 km N of CBD, by the Northland Golf Club; added by request)",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Open year-round; closed only Christmas Day, Boxing Day, New Year's Day, day after NY, Northland Anniversary (per centre 22 Jun)",
+   "avail": "Yes - all days except Tue; only 2 left Wed & Thu (hold ASAP), more Mon/Fri (reply 22 Jun)",
+   "ages": "0-5 (from 3 months; separate under-2 area; Adventurers 2-3.5; Explorers to 5)",
+   "a2": "Yes (licensed for under-2; up to 15 under-2; toddler area)",
+   "a5": "Yes (Explorers room to age 5; ECE to school age)",
+   "contacted": "Yes",
+   "count4": "",
+   "phil": "'Set for School' (BestStart programme); rural setting (the nature emphasis is the location, not a named pedagogy); standard Te Whariki play-based; Storypark",
+   "hours": "Mon-Fri 7:30am-5:30pm",
+   "feesu3": "Unpublished (BestStart pay-in-advance; 2% card surcharge); ask",
+   "fees3": "Unpublished; 20 Hours 3-5; ask",
+   "h20": "Yes for 3-5; not for 2yo",
+   "ero": "Well placed / He pai te tunga: well led; BestStart Northland leaders collaborate with the area manager; collaborative centre culture with a collective focus on ongoing development (report date NF)",
+   "google": "NF (not retrievable; parent testimonials on the BestStart page are positive)",
+   "ph": "09 435 3234 (register also lists mob 022 011 2808)",
+   "em": "pipiwai@best-start.org",
+   "web": "https://best-start.org/centres/beststart-pipiwai-road",
+   "addr": "18 Pipiwai Road, Te Kamo, Whangarei 0176",
+   "lat": -35.67493337,
+   "lng": 174.29709774,
+   "adv": "Long hours (7:30-5:30); meals provided; takes both children incl under-2; recent 'Well placed' ERO; BestStart chain likely open through summer; rural nature-rich setting",
+   "concern": "Outside the 16-suburb scope (Te Kamo/Kamo, ~5 km N of CBD, a drive, north of the home shortlist); fees + exact summer dates unpublished",
+   "action": "Decide days & ask to hold (only 2 left Wed/Thu); complete & return Pre-Enrolment Form ASAP; ask fees; video call. Summer open (closed only listed public hols).",
+   "inreg": "Yes (outside original 16-suburb scope: Te Kamo/Kamo)",
+   "cap": "50 (up to 15 under-2)",
+   "ratios": "Qualified team + cook; chain-standard ratios",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Spacious rural grounds with views; separate secure playgrounds for under-2 and over-2; nature-rich countryside setting",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Quietly solid",
+   "rep_overall": "Strong official ERO ('Well placed') and good family engagement, but thin independent parent-review presence.",
+   "rep_good": [
+    "ERO 'Well placed'; teachers know children and families well",
+    "Regular info-sharing; parents' aspirations in planning",
+    "Well led; Northland BestStart leaders collaborate on quality"
+   ],
+   "rep_bad": [
+    "Little independent (Google/Facebook) review presence"
+   ]
+  },
+  {
+   "id": "StepAhead",
+   "n": "Step Ahead",
+   "suburb": "Kamo (outside the 16-suburb scope; added by request)",
+   "type": "Education & care",
+   "os": "ask",
+   "sdates": "Not stated; Friday farm/nature programme runs in term time, so confirm Christmas/summer closure",
+   "avail": "Yes - both, same days, from Sep (Veli from 14 Sep); ~10 4yos (thinning from Oct); open thru summer bar ~2 wks Xmas/NY (reply 24 Jun)",
+   "ages": "2-5 (no under-2)",
+   "a2": "Yes (2yo+; Veli from 2nd birthday 14 Sep; no under-2)",
+   "a5": "Yes",
+   "contacted": "Yes (emailed 23 Jun 2026)",
+   "count4": "~10",
+   "phil": "Boutique 'home away from home'; Te Whariki play-based; Friday farm/nature programme for older children",
+   "hours": "Not published; confirm",
+   "feesu3": "n/a (no under-2)",
+   "fees3": "Unpublished; 20 Hours 3-5; confirm",
+   "h20": "Yes 3-5; not for 2yo",
+   "ero": "Institution report exists (ERO 47152); rating/date NF",
+   "google": "NF (Google); TheFamilyCompany 12 reviews positive; MyECE 80%+ recommend",
+   "ph": "09 435 2825",
+   "em": "kamo@stepahead.co.nz",
+   "web": "https://stepahead.co.nz",
+   "addr": "13 Grant Street, Kamo, Whangarei 0112",
+   "lat": -35.68239,
+   "lng": 174.30416,
+   "adv": "Warmly praised boutique (2-5); home-like; Friday farm/nature programme; both children together",
+   "concern": "Kamo (outside 16-suburb scope); no under-2 (Veli from 14 Sep); term-based farm programme - confirm summer/Christmas closure; fees unpublished",
+   "action": "Reply SENT 24 Jun (yes to a video call, to be scheduled after our 1-2 wk break). Awaiting: 4-day fees; whether Veli must wait until his 2nd birthday (14 Sep) or they accept under-2.",
+   "inreg": "Yes (outside 16-suburb scope: Kamo)",
+   "cap": "30 (2-5 only; no under-2)",
+   "ratios": "Boutique team; qualified (confirm ratios)",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Outdoor play; Friday farm/nature programme",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "Warmly praised boutique Kamo centre (2-5 yrs). Parents describe it as feeling like home, with bright, caring teachers and children who visibly blossom; long-term family loyalty since it opened ~4 years ago.",
+   "rep_good": [
+    "'staff/teachers there are absolutely amazing and have really helped my daughter come out of her shell'",
+    "'attending since it opened ... feels like home ... bright, cheerful and bubbly' team",
+    "80%+ families recommend (MyECE/OECE); 12 reviews on TheFamilyCompany",
+    "Signature Friday farm / nature programme for older children"
+   ],
+   "rep_bad": [
+    "Term-based farm programme - confirm summer/Christmas closure (fit note, not a complaint)",
+    "No under-2 places (Veli only from his 2nd birthday, 14 Sep)"
+   ]
+  },
+  {
+   "id": "InspiredMinds",
+   "n": "Inspired Minds Early Learning Centre",
+   "suburb": "Tikipunga (outside the 16-suburb scope; added by request)",
+   "type": "Education & care",
+   "os": "open",
+   "sdates": "Closes ~2 to 2.5 weeks over Christmas/New Year (confirm exact dates)",
+   "avail": "HAS SPACE (small centre; 2yo+; one 5yo + ~five 4yos); (reply 22 Jun 2026); video call after 6 Jul",
+   "ages": "2-5 (no under-2)",
+   "a2": "Yes (2yo+; Veli from 14 Sep; no under-2)",
+   "a5": "Yes (one 5yo + ~five 4yos)",
+   "contacted": "Yes (replied 22 Jun 2026)",
+   "count4": "~6 (one 5yo + ~five 4yos)",
+   "phil": "Te Whariki play-based; creativity & confidence focus; converted villa + large garden",
+   "hours": "Full-time + sessional; hours not published, confirm",
+   "feesu3": "n/a (no under-2)",
+   "fees3": "Fees provided to us 22 Jun (ToT in folder); 20 Hours 3-5",
+   "h20": "Yes 3-5; not for 2yo",
+   "ero": "ERO 46185 (report exists; whanau relationships valued; details NF)",
+   "google": "4.6",
+   "ph": "09 437 6357",
+   "em": "R.a.destablishments@gmail.com",
+   "web": "https://inspiredmindsearlylearningcentre.co.nz",
+   "addr": "99 Kiripaka Road, Tikipunga, Whangarei 0112",
+   "lat": -35.689,
+   "lng": 174.3235,
+   "adv": "Warmly praised (G 4.6); distinctive villa + garden; creativity focus; experienced owner-teacher; has space for both (Veli from 14 Sep)",
+   "concern": "Tikipunga (outside 16-suburb scope); no under-2; confirm exact summer closure; coords approx",
+   "action": "Replied 22 Jun (has space); reply sent; arrange video call after 6 Jul; confirm same-days + exact closure",
+   "inreg": "Yes (outside 16-suburb scope: Tikipunga)",
+   "cap": "30 (2-5 only; no under-2)",
+   "ratios": "Experienced owner-teacher (Daniel Williamson, 12 yrs ECE); qualified team",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Converted villa with large outdoor play area / garden",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly praised",
+   "rep_overall": "Warmly praised; a distinctive villa-and-garden centre in Tikipunga (2-5 yrs) run by an experienced owner-teacher, valued for sparking children's creativity and a homely feel.",
+   "rep_good": [
+    "Google 4.6; 'Inspired Minds' villa and outdoor play area spark my son's creativity!'",
+    "Owner-teacher Daniel Williamson (12 years ECE); Te Whariki play-based",
+    "Relationships with whanau valued (ERO)",
+    "Featured on ExploreWhangarei's 'best daycares' list"
+   ],
+   "rep_bad": [
+    "2yo+ only (Veli from 14 Sep) - fit note, not a complaint"
+   ]
+  },
+  {
+   "id": "ValleysLittleTreasures",
+   "n": "Valleys Little and Junior Treasures",
+   "suburb": "Tikipunga (outside the 16-suburb scope; added by request)",
+   "type": "Education & care",
+   "os": "ask",
+   "sdates": "Not stated; confirm Christmas/summer closure",
+   "avail": "Enquiry draft ready (not yet sent); all ages (up to 18 under-2)",
+   "ages": "0-5 (Little Treasures 0-3; Junior Treasures 3-5)",
+   "a2": "Yes (all ages; up to 18 under-2; Veli from younger)",
+   "a5": "Yes (Junior Treasures 3-5)",
+   "contacted": "No (draft ready)",
+   "count4": "",
+   "phil": "Two centres side by side (Little 0-3, Junior 3-5); Te Whariki; fully qualified team",
+   "hours": "Not published; confirm",
+   "feesu3": "Unpublished; confirm",
+   "fees3": "Unpublished; 20 Hours 3-5; confirm",
+   "h20": "Yes 3-5; confirm",
+   "ero": "ERO 46764: strong sense of belonging, very settled; all staff incl owner fully qualified, most experienced",
+   "google": "NF (Google); SchoolParrot / toddler.co.nz listed",
+   "ph": "09 437 7714",
+   "em": "valleyslittletreasures@gmail.com",
+   "web": "NF",
+   "addr": "1 & 2 Paranui Crescent, Tikipunga, Whangarei 0112",
+   "lat": -35.6952,
+   "lng": 174.3293,
+   "adv": "Warmly regarded; all staff fully qualified; strong belonging (ERO); takes all ages 0-5 (Veli from younger)",
+   "concern": "Tikipunga (outside 16-suburb scope); confirm summer closure + fees; thin public reviews; coords approx",
+   "action": "Send enquiry (draft ready); confirm both same-days from Sep, summer closure, fees",
+   "inreg": "Yes (outside 16-suburb scope: Tikipunga)",
+   "cap": "38 (up to 18 under-2)",
+   "ratios": "All staff incl owner fully qualified; most experienced teachers",
+   "langs": "English + Te Reo Maori",
+   "outdoor": "Outdoor play (two centres side by side)",
+   "accepts2": "yes",
+   "accepts5": "yes",
+   "viable": true,
+   "rep": "Warmly regarded",
+   "rep_overall": "Warmly regarded; two side-by-side centres (Little 0-3, Junior 3-5) with a fully qualified team and very settled children. Strong on official quality; public review text is thin.",
+   "rep_good": [
+    "ERO - strong sense of belonging, very settled, clearly enjoying play",
+    "All staff including the owner fully qualified, most experienced",
+    "Covers all ages 0-5 (licensed 38, up to 18 under-2)"
+   ],
+   "rep_bad": [
+    "Limited written parent feedback online beyond directory listings"
+   ]
+  }
+ ]
+};
+//WHGREI_DATA_END
+</script>
+<script src="whangarei_data.js"></script>
+<script>
+window.addEventListener('error',function(ev){try{var b=document.createElement('div');b.style.cssText='position:fixed;left:0;right:0;top:0;z-index:99999;background:#cf4b3e;color:#fff;font:13px -apple-system,sans-serif;padding:8px 12px';b.textContent='Page error: '+(ev.message||(ev.error&&ev.error.message))+' (line '+(ev.lineno||'?')+')';(document.body||document.documentElement).appendChild(b);}catch(e){}});
+if(!window.WHGREI){var _s=document.getElementById('sub');if(_s)_s.textContent="Could not load the data. Run python3 build_synthesis.py, then open this file from the same folder.";}
+const DB=window.WHGREI||{daycares:[],meta:{}};
+const DAYS=DB.daycares||[],META=DB.meta||{};
+const esc=s=>(s==null?"":String(s)).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const SUBS=[...new Set(DAYS.map(d=>d.suburb||"Other"))].sort();
+let selSub=new Set(SUBS);
+let sortKey="suburb",sortDir=1,collapsed=new Set();
+
+// suburb chips
+const sc=document.getElementById('subChips');
+SUBS.forEach(s=>{const b=document.createElement('button');b.className='schip on';b.textContent=s;b.dataset.s=s;
+  b.addEventListener('click',()=>{if(selSub.has(s)){selSub.delete(s);b.classList.remove('on');}else{selSub.add(s);b.classList.add('on');}render();});sc.appendChild(b);});
+document.getElementById('allSub').addEventListener('click',()=>{const all=selSub.size===SUBS.length;selSub=new Set(all?[]:SUBS);
+  sc.querySelectorAll('.schip').forEach(b=>b.classList.toggle('on',!all));render();});
+
+// Multi-select checkbox filters. A row passes a filter if its value is among the
+// ticked boxes; all boxes ticked = no constraint (same as the old "Any"/"All" default).
+function buildCheckGroup(id,opts,sel){const c=document.getElementById(id);if(!c)return;c.innerHTML='';
+  opts.forEach(o=>{const lab=document.createElement('label');const cb=document.createElement('input');
+    cb.type='checkbox';cb.checked=sel.has(o.value);cb.value=o.value;
+    cb.addEventListener('change',()=>{cb.checked?sel.add(o.value):sel.delete(o.value);render();});
+    lab.appendChild(cb);lab.appendChild(document.createTextNode(o.label));c.appendChild(lab);});}
+const TYPES=[...new Set(DAYS.map(d=>d.type))].filter(Boolean).sort();
+let selType=new Set(TYPES);
+let selOS=new Set(['open','closed','ask','na']);
+let sel2=new Set(['yes','confirm','no']);
+let selAvail=new Set(['yes','no','unknown']);
+buildCheckGroup('fType',TYPES.map(t=>({value:t,label:t})),selType);
+buildCheckGroup('fOS',[{value:'open',label:'Open'},{value:'closed',label:'Closed part'},{value:'ask',label:'Confirm'},{value:'na',label:'n/a'}],selOS);
+buildCheckGroup('f2',[{value:'yes',label:'Yes'},{value:'confirm',label:'Confirm'},{value:'no',label:'No'}],sel2);
+buildCheckGroup('fAvail',[{value:'yes',label:'Yes'},{value:'no',label:'No'},{value:'unknown',label:'Unknown'}],selAvail);
+
+const OS_LAB={open:"Open",closed:"Closed part",ask:"Confirm",na:"n/a"};
+const OS_ORD={open:0,ask:1,closed:2,na:3};
+const ACC_ORD={yes:0,confirm:1,no:2};
+function gnum(d){const m=String(d.google||"").match(/[\d.]+/);return m?parseFloat(m[0]):-1;}
+function osPill(d){const lab=OS_LAB[d.os]||d.os;return '<span class="pill os-'+d.os+'">'+lab+'</span>';}
+function accCell(state,raw){const c=state==='yes'?'yes':(state==='no'?'no':'ask');const mk=state==='yes'?'&#10003;':(state==='no'?'&#10007;':'?');
+  return '<span class="'+c+'" title="'+esc(raw||'')+'"><b>'+mk+'</b></span>';}
+function feesCell(d){const u3=esc(d.feesu3||'');const f3=esc(d.fees3||'');if(!u3&&!f3)return '<span class="ask">ask</span>';
+  return (u3?'<div><b>U3:</b> '+u3+'</div>':'')+(f3?'<div><b>3+:</b> '+f3+'</div>':'');}
+function contactCell(d){const ph=d.ph?esc(d.ph):'';const em=d.em&&d.em!=='NF'?'<a class="link" href="mailto:'+esc(d.em)+'">'+esc(d.em)+'</a>':'';
+  return (ph?'<div>'+ph+'</div>':'')+(em?'<div>'+em+'</div>':'')||'<span class="ask">ask</span>';}
+// Derived: does the centre take under-2s? Inferred from capacity/age/policy fields (verify by phone).
+function u2val(d){const cap=String(d.cap||'').toLowerCase(),a2=String(d.a2||'').toLowerCase(),ages=String(d.ages||'').toLowerCase();const blob=cap+' | '+a2;
+  if(/confirm under-2/.test(a2))return 'confirm';
+  if(/\b0 under-2|under-2 no|no under-2|no separate under-2/.test(blob))return 'no';
+  if(/all under-2|up to[^|]*under-2|max 2 under-2|under-2 (whare|area|facility|room)|takes under-2|under-2 may attend|under-2s|under-2 and 2yo|infant/.test(blob))return 'yes';
+  if(/^0|birth|month|week|newborn|all ages/.test(ages))return 'yes';
+  if(/^2|preschool/.test(ages))return 'no';
+  return 'confirm';}
+function u2note(d){const cap=String(d.cap||''),a2=String(d.a2||'');let m=cap.match(/(up to[^,;()]*under-2|all under-2|max 2 under-2|0 under-2)/i);if(m)return m[1].trim();m=a2.match(/(under-2[^,;()]*)/i);if(m)return m[1].trim();return d.ages||'';}
+// Derived availability sentiment from the raw reply text: 'yes' | 'no' | 'unknown'.
+function availState(d){const t=String(d.avail||'').toLowerCase();if(!t)return 'unknown';
+  if(/declined|permanently closed/.test(t))return 'no';
+  if(/confirmed/.test(t))return 'yes';
+  if(/\byes\b|availab|vacanc|enrol|can hold|hold for|spaces|space (may|likely)|places|low roll|small roll|growing|recruiting|encouraging/.test(t))return 'yes';
+  if(/waitlist|waiting list|no guarantee|poor fit|unlikely/.test(t))return 'no';
+  return 'unknown';}
+const MON={jan:'Jan',feb:'Feb',mar:'Mar',apr:'Apr',may:'May',jun:'Jun',jul:'Jul',aug:'Aug',sep:'Sep',oct:'Oct',nov:'Nov',dec:'Dec'};
+// Condensed Availability label: Yes / No / Unknown, with a start-month qualifier when stated.
+function availLabel(d){const s=availState(d);const raw=esc(d.avail||'');
+  if(s==='unknown')return '<span class="ask" title="'+raw+'">Unknown</span>';
+  const m=String(d.avail||'').match(/\b(?:from|after|start(?:s|ing)?|hold for|both in)\b[^.;,]*?\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*/i);
+  let q='';if(m){const mo=m[1].toLowerCase();if(mo!=='jun'&&mo!=='jul')q=' - '+MON[mo];}
+  return '<span class="'+(s==='yes'?'yes':'no')+'" title="'+raw+'">'+(s==='yes'?'Yes':'No')+q+'</span>';}
+// Weekday availability: which days are explicitly named available vs explicitly excluded.
+function dayInfo(d){const t=String(d.avail||'').toLowerCase();
+  const names={mon:/\bmon(day)?s?\b/,tue:/\btues?(day)?\b/,wed:/\bwed(nesday)?\b/,thu:/\bthur?s?(day)?\b/,fri:/\bfri(day)?s?\b/};
+  const allWeek=/\ball days\b|\bevery ?day\b|\ball week\b|\bmon(day)?\s*(-|–|to)\s*fri(day)?\b/.test(t);
+  const excl={};(t.match(/(except|excl\.?|closed|unavailable)\b[^.;]*/g)||[]).forEach(seg=>{for(const k in names)if(names[k].test(seg))excl[k]=true;});
+  const avail={};for(const k in names){if(excl[k])continue;if(allWeek||names[k].test(t))avail[k]=true;}
+  return {avail,excl};}
+// Per-day square state: green=confirmed avail, red=confirmed not avail, half=implied avail, white=no info.
+function dayState(d,day){const o=dayInfo(d);if(o.excl[day])return 'red';if(o.avail[day])return 'green';const s=availState(d);return s==='yes'?'half':(s==='no'?'red':'white');}
+const DAYLAB={green:'Confirmed available',red:'Not available',half:'Implied available (no specific day confirmed)',white:'No information'};
+function sqCell(d,day){const st=dayState(d,day);return '<span class="sq sq-'+st+'" title="'+DAYLAB[st]+'"></span>';}
+// Replied / open channel, derived from reply markers in the raw text.
+function hasReplied(d){return /\breply\b|confirmed \(|declined \(|acknowledg/i.test(String(d.avail||''));}
+function repliedCell(d){return hasReplied(d)?'<span class="yes" title="Has replied to us at least once"><b>&#10003;</b></span>':'<span class="ask" title="No open channel yet">&mdash;</span>';}
+// Contacted: have we emailed this centre at least once (from the Comparison sheet's Contacted column).
+function isContacted(d){return /^y/i.test(String(d.contacted||''));}
+function contactedCell(d){return isContacted(d)?'<span class="yes" title="We have emailed them at least once"><b>&#10003;</b></span>':'<span class="ask" title="Not contacted yet">&mdash;</span>';}
+// 4+YO peer count: number of 4 to 5-year-olds the centre has / normally has. Blank cell when unknown.
+function count4num(d){const m=String(d.count4||'').match(/\d+/);return m?parseInt(m[0],10):null;}
+function count4Cell(d){const s=String(d.count4||'').trim();return s?'<span title="Number of 4 to 5-year-olds the centre has or normally has">'+esc(s)+'</span>':'';}
+// Hours with weekday tokens stripped out.
+function hoursLabel(d){let s=String(d.hours||'');
+  s=s.replace(/\bmon(day)?\s*[-–]\s*(fri(day)?|sat(urday)?|sun(day)?)\b/gi,'').replace(/\bmon(day)?\s*to\s*fri(day)?\b/gi,'');
+  s=s.replace(/\b(mon|tue|wed|thu|fri|sat|sun)(day|s)?\b\.?/gi,'').replace(/\bweekdays?\b/gi,'');
+  s=s.replace(/\s{2,}/g,' ').replace(/\s+([;,])/g,'$1').replace(/^[\s;,\-–]+/,'').trim();
+  return esc(s||d.hours||'');}
+
+// Philosophy cell: render the semicolon-delimited philosophy as a clean bullet list
+// when there are 2+ distinct points; otherwise fall back to plain text (only bullet when clean).
+function philCell(s){s=String(s||'').trim();if(!s)return '';
+  const parts=s.split(';').map(x=>x.trim()).filter(Boolean);
+  if(parts.length<2)return esc(s);
+  return '<ul class="phil-list">'+parts.map(p=>'<li>'+esc(p)+'</li>').join('')+'</ul>';}
+
+// Reputation: a 2-word summary, then standout good (green) / bad (red) as a bullet list.
+const REP_RANK={"Highly rated":1,"Strongly recommended":2,"Warmly praised":3,"Warmly regarded":4,
+  "Well recommended":5,"Distinctively loved":6,"Community-respected":7,"Quietly respected":8,
+  "Generally positive":9,"Quietly positive":10,"Quietly solid":11,"Whanau-centred":12,
+  "Few reviews":13,"Little feedback":14,"Mixed signals":15,"Development needs":16,
+  "Compliance concerns":17,"Verify status":18};
+function repSortVal(d){const r=REP_RANK[String(d.rep||'').trim()];return r==null?50:r;}
+function repCell(d){
+  const s=String(d.rep||'').trim();
+  const good=(d.rep_good||[]),bad=(d.rep_bad||[]);
+  if(!s && !good.length && !bad.length) return '';
+  let html=s?'<div class="rep2">'+esc(s)+'</div>':'';
+  const items=good.map(g=>'<li class="rep-good">'+esc(g)+'</li>')
+              .concat(bad.map(b=>'<li class="rep-bad">'+esc(b)+'</li>'));
+  if(items.length) html+='<ul class="rep-list">'+items.join('')+'</ul>';
+  return html;}
+
+function agesConcise(raw){
+  if(raw==null) return '';
+  let s=String(raw).replace(/\([^)]*\)/g,' ');                 // drop parentheticals
+  s=s.replace(/~/g,'').replace(/\bonly\b/gi,' ');              // drop "~" and "only"
+  s=s.replace(/\b(birth|newborn)\b/gi,'0');                    // birth/newborn -> 0
+  s=s.replace(/(\d+(?:\.\d+)?)\s*months?/gi,'$1mo');           // "3 months" -> "3mo"
+  s=s.replace(/(\d+(?:\.\d+)?)\s*weeks?/gi,'$1wk');            // "6 weeks" -> "6wk"
+  s=s.replace(/\s*to\s+(pre-?\s*school|school)(\s*(start|age))?/gi,'-5'); // "to school..." -> upper bound 5
+  s=s.replace(/\bschool\s*(age|start)\b/gi,'5');               // standalone "school age/start" -> 5
+  s=s.replace(/\ball\s+ages.*$/gi,'0-5');                      // "all ages..." -> 0-5
+  s=s.replace(/\b(years?|yrs?|yo)\b/gi,' ');                   // strip "years"/"yrs"/"yo"
+  s=s.replace(/\s*to\s*/gi,'-');                               // remaining "to" -> range dash
+  s=s.replace(/\s*-\s*/g,'-');                                 // tighten dashes
+  s=s.replace(/\s+/g,' ').trim();
+  return s || String(raw);
+}
+const COLS=[
+ {k:"suburb",t:"Suburb",sort:true,cls:"name",v:d=>esc(d.suburb||"Other")},
+ {k:"n",t:"Centre",sort:true,cls:"name",v:d=>esc(d.n)+(d.inreg==="No"?' <span class="flagmark" title="Not in the current licensed register (Jun 2026), or registered outside the district. Verify it is operating.">&#9873;</span>':'')+(!d.viable?'<div style="font-size:10px;color:var(--faint)">does not take both children</div>':'')},
+ {k:"contacted",t:"Contacted",sort:true,cls:"day",sortv:d=>isContacted(d)?0:1,v:d=>contactedCell(d)},
+ {k:"replied",t:"Replied",sort:true,cls:"day",sortv:d=>hasReplied(d)?0:1,v:d=>repliedCell(d)},
+ {k:"reputation",t:"Reputation",sort:true,cls:"repcol",sortv:d=>repSortVal(d),v:d=>repCell(d)},
+ {k:"web",t:"Web",sort:false,v:d=>d.web&&d.web!=='NF'?'<a class="link" href="'+esc(d.web)+'" target="_blank">site</a>':''},
+ {k:"map",t:"Map",sort:false,cls:"map-col",v:d=>'<a class="link" href="whangarei_map.html?day='+encodeURIComponent(d.id)+'" target="_blank">show</a>'},
+ {k:"os",t:"Summer",sort:true,sortv:d=>OS_ORD[d.os]==null?9:OS_ORD[d.os],v:d=>osPill(d)+(d.sdates&&d.sdates!=='n/a'?'<div style="font-size:10px;color:var(--faint);white-space:normal;max-width:160px">'+esc(d.sdates)+'</div>':'')},
+ {k:"ages",t:"Ages",sort:false,v:d=>d.ages?'<span title="'+esc(d.ages)+'">'+esc(agesConcise(d.ages))+'</span>':''},
+ {k:"au2",t:"&lt;2YO",sort:true,sortv:d=>ACC_ORD[u2val(d)]==null?9:ACC_ORD[u2val(d)],v:d=>accCell(u2val(d),u2note(d))},
+ {k:"a2",t:"2yo",sort:true,sortv:d=>ACC_ORD[d.accepts2]==null?9:ACC_ORD[d.accepts2],v:d=>accCell(d.accepts2,d.a2)},
+ {k:"count4",t:"4+YO",sort:true,sortv:d=>{const n=count4num(d);return n==null?-1:n;},v:d=>count4Cell(d)},
+ {k:"avail",t:"Availability",sort:true,sortv:d=>({yes:0,no:2,unknown:1})[availState(d)],v:d=>availLabel(d)},
+ {k:"mon",t:"Mon",sort:false,cls:"day",v:d=>sqCell(d,'mon')},
+ {k:"tue",t:"Tues",sort:false,cls:"day",v:d=>sqCell(d,'tue')},
+ {k:"wed",t:"Wed",sort:false,cls:"day",v:d=>sqCell(d,'wed')},
+ {k:"thu",t:"Thurs",sort:false,cls:"day",v:d=>sqCell(d,'thu')},
+ {k:"fri",t:"Fri",sort:false,cls:"day",v:d=>sqCell(d,'fri')},
+ {k:"hours",t:"Hours",sort:false,v:d=>hoursLabel(d)},
+ {k:"fees",t:"Fees",sort:false,cls:"wrapwide",v:d=>feesCell(d)},
+ {k:"type",t:"Type",sort:true,v:d=>esc(d.type)},
+ {k:"phil",t:"Philosophy",sort:false,cls:"wrap",v:d=>philCell(d.phil)},
+ {k:"ero",t:"ERO",sort:false,cls:"wrapwide",v:d=>esc(d.ero||'')},
+ {k:"google",t:"Google",sort:true,sortv:d=>gnum(d),v:d=>esc(d.google||'')},
+ {k:"contact",t:"Contact",sort:false,cls:"wrap",v:d=>contactCell(d)},
+ {k:"action",t:"Questions to ask",sort:false,cls:"wrapwide",v:d=>esc(d.action||'')},
+];
+
+function passes(d){
+  if(!selType.has(d.type))return false;
+  if(!selOS.has(d.os))return false;
+  if(!sel2.has(d.accepts2))return false;
+  const f4=document.getElementById('f4min').value.trim();
+  if(f4!==''){const min=parseInt(f4,10);
+    if(!isNaN(min)){const n=count4num(d);
+      if(n==null){if(!document.getElementById('f4unk').checked)return false;}
+      else if(n<min)return false;}}
+  const vc=document.getElementById('fContacted').value;if(vc!=='all'&&(isContacted(d)?'yes':'no')!==vc)return false;
+  const vr=document.getElementById('fReplied').value;if(vr!=='all'&&(hasReplied(d)?'yes':'no')!==vr)return false;
+  if(!selAvail.has(availState(d)))return false;
+  if(!selSub.has(d.suburb||"Other"))return false;
+  return true;
+}
+function sortRows(rows){const col=COLS.find(c=>c.k===sortKey)||COLS[0];
+  const val=d=>{if(col.sortv)return col.sortv(d);const v=d[sortKey];return v==null?'':v;};
+  return rows.slice().sort((a,b)=>{let x=val(a),y=val(b);if(typeof x==='string'||typeof y==='string'){x=String(x).toLowerCase();y=String(y).toLowerCase();return x<y?-1*sortDir:x>y?1*sortDir:0;}return (x-y)*sortDir;});}
+
+function render(){
+  if(urlReady)syncURL();
+  const main=document.getElementById('main');main.innerHTML="";
+  const shown=DAYS.filter(passes);
+  const c=META.counts||{};
+  document.getElementById('sub').innerHTML=shown.length+" of "+DAYS.length+" daycares shown &middot; "+(c.daycares_viable||0)+" accept both children, "+(c.daycares_open_summer||0)+" open through summer &middot; data generated "+(META.generated||"");
+  if(!shown.length){main.innerHTML='<div class="empty">No daycares match these filters.</div>';return;}
+  const rows=sortRows(shown);
+  const sec=document.createElement('section');sec.className='sec';
+  const wrap=document.createElement('div');wrap.className='tblwrap';
+  let thead='<tr>'+COLS.map(c=>{const ar=c.sort&&sortKey===c.k?(' <span class="ar">'+(sortDir>0?'&#9650;':'&#9660;')+'</span>'):'';return '<th class="'+(c.sort?'sortable ':'')+(c.cls==='map-col'?'map-col':'')+'" data-k="'+(c.sort?c.k:'')+'">'+c.t+ar+'</th>';}).join('')+'</tr>';
+  let body=rows.map(d=>'<tr class="'+(d.viable?'':'row-nonviable')+'" data-id="'+esc(d.id)+'">'+COLS.map(c=>'<td class="'+(c.cls||'')+'">'+c.v(d)+'</td>').join('')+'</tr>').join('');
+  wrap.innerHTML='<table><thead>'+thead+'</thead><tbody>'+body+'</tbody></table>';
+  wrap.querySelectorAll('th.sortable').forEach(th=>th.addEventListener('click',()=>{const k=th.dataset.k;if(!k)return;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=1;}render();}));
+  sec.appendChild(wrap);main.appendChild(sec);
+}
+// The "keep no-count" toggle only has meaning once a minimum is set; enable/dim it accordingly.
+function syncF4(){const has=document.getElementById('f4min').value.trim()!=='';const cb=document.getElementById('f4unk');const lb=document.getElementById('f4unkLbl');cb.disabled=!has;lb.style.cursor=has?'pointer':'not-allowed';lb.style.color=has?'var(--muted)':'var(--faint)';lb.style.opacity=has?'1':'.55';}
+['f4min','f4unk','fContacted','fReplied'].forEach(id=>{const el=document.getElementById(id);el.addEventListener('input',()=>{syncF4();render();});el.addEventListener('change',()=>{syncF4();render();});});
+
+// ---- Collapsible filter panel + filter state persisted in the URL (survives refresh) ----
+// Multi-value groups are stored compactly as the *unticked* options (default = all ticked,
+// so the param is absent). Suburbs likewise. Values joined by '~' (never appears in our labels).
+const GROUPS=[
+  {p:'st',get:()=>selType,all:TYPES,el:'fType'},
+  {p:'os',get:()=>selOS,all:['open','closed','ask','na'],el:'fOS'},
+  {p:'a2',get:()=>sel2,all:['yes','confirm','no'],el:'f2'},
+  {p:'av',get:()=>selAvail,all:['yes','no','unknown'],el:'fAvail'},
+];
+const gv=id=>document.getElementById(id);
+let urlReady=false,panelOpen=false;
+function activeFilterCount(){let n=0;
+  GROUPS.forEach(g=>{if(g.all.some(v=>!g.get().has(v)))n++;});
+  if(SUBS.some(s=>!selSub.has(s)))n++;
+  if(gv('fContacted').value!=='all')n++;
+  if(gv('fReplied').value!=='all')n++;
+  if(gv('f4min').value.trim()!=='')n++;
+  return n;}
+function setPanel(open){panelOpen=open;gv('filterPanel').hidden=!open;
+  const b=gv('toggleFilters');b.setAttribute('aria-expanded',open?'true':'false');
+  const n=activeFilterCount();
+  b.innerHTML=open?'Hide filters &#9652;':('Show filters &#9656;'+(n?' <span style="opacity:.7">('+n+' active)</span>':''));
+  if(urlReady)syncURL();}
+function syncURL(){try{
+  const p=new URLSearchParams();
+  GROUPS.forEach(g=>{const off=g.all.filter(v=>!g.get().has(v));if(off.length)p.set(g.p,off.join('~'));});
+  const subOff=SUBS.filter(s=>!selSub.has(s));if(subOff.length)p.set('sub',subOff.join('~'));
+  if(gv('fContacted').value!=='all')p.set('c',gv('fContacted').value);
+  if(gv('fReplied').value!=='all')p.set('r',gv('fReplied').value);
+  const m=gv('f4min').value.trim();if(m!=='')p.set('m',m);
+  if(gv('f4unk').checked)p.set('k','1');
+  if(sortKey!=='suburb')p.set('s',sortKey);
+  if(sortDir!==1)p.set('d','-');
+  if(panelOpen)p.set('fp','1');
+  const qs=p.toString();
+  history.replaceState(null,'',location.pathname+(qs?('?'+qs):''));
+}catch(e){}}
+function restoreFromURL(Q){
+  GROUPS.forEach(g=>{const raw=Q.get(g.p);const off=raw!=null?new Set(raw.split('~')):new Set();
+    const s=g.get();s.clear();g.all.forEach(v=>{if(!off.has(v))s.add(v);});
+    document.querySelectorAll('#'+g.el+' input[type=checkbox]').forEach(cb=>{cb.checked=s.has(cb.value);});});
+  const rawSub=Q.get('sub');
+  selSub=rawSub!=null?(()=>{const off=new Set(rawSub.split('~'));return new Set(SUBS.filter(s=>!off.has(s)));})():new Set(SUBS);
+  sc.querySelectorAll('.schip').forEach(b=>b.classList.toggle('on',selSub.has(b.dataset.s)));
+  if(Q.get('c'))gv('fContacted').value=Q.get('c');
+  if(Q.get('r'))gv('fReplied').value=Q.get('r');
+  if(Q.get('m')!=null)gv('f4min').value=Q.get('m');
+  if(Q.get('k')==='1')gv('f4unk').checked=true;
+  if(Q.get('s')){sortKey=Q.get('s');sortDir=Q.get('d')==='-'?-1:1;}}
+gv('toggleFilters').addEventListener('click',()=>setPanel(!panelOpen));
+
+// init: restore from the URL first, then render, then handle ?dc= focus
+const Q=new URLSearchParams(location.search);
+restoreFromURL(Q);
+syncF4();
+setPanel(Q.get('fp')==='1');
+urlReady=true;
+render();
+(function(){const did=Q.get('dc')||Q.get('day');if(did){const d=DAYS.find(x=>x.id===did);if(d){const sub=d.suburb||"Other";selSub=new Set([sub]);sc.querySelectorAll('.schip').forEach(b=>b.classList.toggle('on',b.dataset.s===sub));render();
+  setTimeout(()=>{const tr=document.querySelector('tr[data-id="'+CSS.escape(d.id)+'"]');if(tr){tr.scrollIntoView({block:'center',behavior:'smooth'});tr.style.transition='background .2s';tr.style.background='var(--green-bg)';setTimeout(()=>{tr.style.background='';},1600);}else{const sec=[...document.querySelectorAll('.sechd .nm')].find(n=>n.textContent===sub);if(sec)sec.scrollIntoView({block:'start',behavior:'smooth'});}},120);}}})();
+</script>
+</body>
+</html>
