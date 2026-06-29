@@ -3271,10 +3271,18 @@ function row(k,v){return v?'<div class="pop-row"><span class="k">'+k+'</span><sp
 function mh(label,state){const cls=state==='yes'?'yes':(state==='no'?'no':'ask');const mk=state==='yes'?'✓':(state==='no'?'✗':'?');return '<span class="mh '+cls+'"><b>'+mk+'</b> '+label+'</span>';}
 function covBadge(c){const m={yes:['Covers our window','#e6f4ec','#1d6b46'],likely:['Term: confirm','#fbeed6','#7a4d0c'],no:['Does NOT cover window','#f8e3e0','#8a2e25']};const x=m[c]||m.likely;return '<span class="pop-badge" style="background:'+x[1]+';color:'+x[2]+'">'+x[0]+'</span>';}
 
+function foodRow(d){
+  if(!d.food_status)return"";
+  var m={provided:['Lunches provided','#e6f4ec','#1d6b46'],partial:['Some food; still pack a lunch','#fbeed6','#7a4d0c'],byo:['Pack your own lunch','#f8e3e0','#8a2e25'],varies:['Varies by educator','#eceae3','#55534c'],unknown:['Unknown - confirm','#eceae3','#55534c']};
+  var x=m[d.food_status]||m.unknown;
+  var conf=d.food_conf?' <span style="color:#8a887f">('+esc(d.food_conf)+' conf.)</span>':'';
+  var tip=d.food_note?' title="'+esc(d.food_note).replace(/"/g,'&quot;')+'"':'';
+  return row('Lunches','<span class="pop-badge"'+tip+' style="background:'+x[1]+';color:'+x[2]+'">'+x[0]+'</span>'+conf);
+}
 function dayPopup(d){
   const rows=[row("Open?","<b>"+esc(d.sdates)+"</b>"),row("Ages",esc(d.ages)),
     row("2yo",esc(d.a2)),row("5yo",esc(d.a5)),row("Hours",esc(d.hours)),
-    row("Fees",esc(d.feesu3)+" (under-3); "+esc(d.fees3)+" (3+)"),row("20 Hrs",esc(d.h20)),
+    row("Fees",esc(d.feesu3)+" (under-3); "+esc(d.fees3)+" (3+)"),row("20 Hrs",esc(d.h20)),foodRow(d),
     row("ERO",esc(d.ero)),row("Google",esc(d.google)),row("Avail",esc(d.avail)),
     row("Phone",esc(d.ph)),row("Email",d.em?'<a href="mailto:'+esc(d.em)+'">'+esc(d.em)+'</a>':""),
     row("Web",d.web&&d.web!=="NF"?'<a href="'+esc(d.web)+'" target="_blank">'+esc(d.web)+'</a>':""),
